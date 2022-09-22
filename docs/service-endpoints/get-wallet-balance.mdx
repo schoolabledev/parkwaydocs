@@ -1,0 +1,20 @@
+---
+title: "Get Wallet Balance"
+description: "This endpoint is used with the unique customer wallet account number generated for each customer to retrieve ledger and available balance."
+api: "GET /api/provider/wallets/{walletAccountNumber}/balance"
+---
+
+<ResponseExample>
+
+```json Response
+{
+  "accountNumber": "5000000020",
+  "alias": "obinna23",
+  "ledgerBalance": 0.0,
+  "availableBalance": 0.0,
+  "unclearedEffects": 0.0,
+  "asAt": 1587329297981
+}
+```
+
+</ResponseExample>

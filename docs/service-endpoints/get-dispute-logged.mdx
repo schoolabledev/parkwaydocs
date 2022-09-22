@@ -1,0 +1,34 @@
+---
+title: "Get Dispute Logged"
+description: "This endpoint is utilized by partner institutions to get dispute already logged."
+api: "GET /api/agent/:agentId/disputes/:disputeId"
+---
+
+<ResponseExample>
+
+```json Response
+{
+  "id": 8491,
+  "maskedPan": "519911******0117",
+  "paymentRef": "004698192825",
+  "tid": "2035U967",
+  "transactionStan": 503522,
+  "amount": 50000,
+  "status": "Processing",
+  "phoneNumber": "07086673506",
+  "transactionDate": "2022-01-10",
+  "reason": "Double Debit",
+  "responseDescription": "Not sufficient funds",
+  "responseCode": "51",
+  "logCode": "N/A",
+  "dateVerified": "2022-01-11",
+  "verifiedBy": "IGINLA ABDULHAKEEM",
+  "verifierComment": "TRANSACTION FAILED WITH ERROR RESPONSE \"INSUFFICIENT FUND\"",
+  "dateApproved": "",
+  "approvedBy": "",
+  "approverComment": "TRANSACTION FAILED WITH ERROR RESPONSE \"INSUFFICIENT FUND\"",
+  "loggedDate": "2022-01-10"
+}
+```
+
+</ResponseExample>

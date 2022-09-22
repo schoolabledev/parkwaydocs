@@ -1,0 +1,35 @@
+---
+title: "Fund Wallet"
+description: "This endpoint is utilized to fund customer unique account number created."
+api: "POST /api/provider/wallets/transactions/fund"
+---
+
+<RequestExample>
+
+```json Request
+{
+"toAccountNumber" : "5000001773", "amount" : "1000.00",
+"memo”: "bank transfer",
+"transactionRef”: "459685869589612345fff"
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "code": "0000",
+  "desc": "Approved or completed successfully",
+  "retRef": "503763",
+  "stan": "000000000801",
+  "transdatetime": "20211108220844",
+  "bvn": null,
+  "voucher": "459685869589612345fff",
+  "extra": "",
+  "pin": ""
+}
+```
+
+</ResponseExample>

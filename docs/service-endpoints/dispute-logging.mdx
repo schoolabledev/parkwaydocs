@@ -1,0 +1,57 @@
+---
+title: "Dispute Logging"
+description: "This endpoint is utilized by partner institutions to log disputes within its system to the readycash service for resolution."
+api: "POST /api/agent/disputes/create"
+---
+
+<RequestExample>
+
+```json Request
+{
+  "tid": "2035U967",
+  "transactionStan": "503522",
+  "maskedPan": "519911******0117",
+  "transactionDateTime": "1641843092000",
+  "paymentRef": "004698192825",
+  "amount": 50000,
+  "agentId": 100192,
+  "phoneNumber": "07086673506",
+  "reason": "Double Debit",
+  "responseDescription": "Not sufficient funds",
+  "responseCode": "51"
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "message": "Transaction Dispute created Successfully",
+  "data": {
+    "id": 8492,
+    "maskedPan": "519911******0117",
+    "paymentRef": "004699762852",
+    "tid": "2035U967",
+    "transactionStan": "504386",
+    "amount": 200000,
+    "status": "Pending",
+    "phoneNumber": "07086673506",
+    "transactionDate": "2022-01-11 12:18:20",
+    "reason": "Double Debit",
+    "responseDescription": "Not sufficient funds",
+    "responseCode": "51",
+    "logCode": "",
+    "dateVerified": "",
+    "verifiedBy": "",
+    "verifierComment": "No Comments",
+    "dateApproved": "",
+    "approvedBy": "",
+    "approverComment": "No Comments",
+    "loggedDate": "2022-01-11"
+  }
+}
+```
+
+</ResponseExample>

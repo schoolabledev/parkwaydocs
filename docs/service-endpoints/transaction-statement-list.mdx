@@ -1,0 +1,59 @@
+---
+title: "Transaction Statement / Transaction List"
+description: "This endpoint is utilized to get a transaction statement and retrieve a list of transaction on a wallet"
+api: "GET /api/provider/wallets/wallets/:accountNumber/statement"
+---
+
+<ResponseExample>
+
+```json Response
+Sample Response
+[
+    {
+        "debit": false,
+        "sender": null,
+        "recipient": null,
+        "terminal": null,
+        "tranId": 93292,
+        "tranType": "200.22.0000",
+        "description": null,
+        "shortDescription": null,
+        "longDescription": null,
+        "date": 1640016577000,
+        "amount": 100.00,
+        "reciept": null,
+        "balance": 955397.00,
+        "balance2": null,
+        "logoId": null,
+        "externalRef": null,
+        "sessionId": null,
+        "timestamp": null,
+        "captureDate": null,
+        "narration": null
+},
+{
+        "debit": false,
+        "sender": null,
+        "recipient": null,
+        "terminal": null,
+        "tranId": 93291,
+        "tranType": "200.22.0000",
+        "description": null,
+        "shortDescription": null,
+        "longDescription": null,
+        "date": 1640016417000,
+        "amount": 5000.00,
+        "reciept": null,
+        "balance": 955497.00,
+        "balance2": null,
+        "logoId": null,
+        "externalRef": null,
+        "sessionId": null,
+        "timestamp": null,
+        "captureDate": null,
+        "narration": null
+    }
+{
+```
+
+</ResponseExample>
