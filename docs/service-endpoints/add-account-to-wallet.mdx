@@ -1,0 +1,35 @@
+---
+title: "Add Account to Wallet"
+description: "This endpoint is utilized to add multiple account to a customer wallet created with customer unique phone number which returns a sub wallet account number."
+api: "POST /api/provider/wallets/:phoneNumber/accounts/add"
+---
+
+<RequestExample>
+
+```json Request
+{
+  "alias": "HENRYS CHILD",
+  "currencyCode": "566"
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "alias": "HENRYS CHILD",
+  "accountNumber": "5000001773",
+  "currency": "566",
+  "createdOn": 1636405420440,
+  "activatedOn": null,
+  "authToken": null,
+  "owner": {
+    "productName": "PAYZONE"
+  },
+  "active": true
+}
+```
+
+</ResponseExample>

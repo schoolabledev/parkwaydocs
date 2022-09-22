@@ -1,0 +1,58 @@
+---
+title: "Fund Wallet Transaction Status Check"
+api:
+  "GET /api/provider/wallets/transactions/fund/:accountNumber/:yourRef/status"
+---
+
+<ResponseExample>
+
+```json Response
+[
+  {
+    "debit": false,
+    "sender": null,
+    "recipient": null,
+    "terminal": null,
+    "tranId": 93292,
+    "tranType": "200.22.0000",
+    "description": null,
+    "shortDescription": null,
+    "longDescription": null,
+    "date": 1640016577000,
+    "amount": 100.0,
+    "reciept": null,
+    "balance": 955397.0,
+    "balance2": null,
+    "logoId": null,
+    "externalRef": null,
+    "sessionId": null,
+    "timestamp": null,
+    "captureDate": null,
+    "narration": null
+  },
+  {
+    "debit": false,
+    "sender": null,
+    "recipient": null,
+    "terminal": null,
+    "tranId": 93291,
+    "tranType": "200.22.0000",
+    "description": null,
+    "shortDescription": null,
+    "longDescription": null,
+    "date": 1640016417000,
+    "amount": 5000.0,
+    "reciept": null,
+    "balance": 955497.0,
+    "balance2": null,
+    "logoId": null,
+    "externalRef": null,
+    "sessionId": null,
+    "timestamp": null,
+    "captureDate": null,
+    "narration": null
+  }
+]
+```
+
+</ResponseExample>

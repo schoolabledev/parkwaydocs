@@ -1,0 +1,73 @@
+---
+title: "Get Dispute Logged History"
+description: "This endpoint is utilized to getting dispute history per partner institution request within a date range."
+api: "GET
+  /api/agent/disputes/:agentId?from=2022-01-01T23:00:00.000Z&to=2022-01-11T23:00:00.000Z"
+---
+
+<ResponseExample>
+
+```json Response
+{
+"data": [
+{
+"id": 8492,
+            "maskedPan": "519911******0117",
+            "paymentRef": "004699762852",
+            "tid": "2035U967",
+            "transactionStan": 504386,
+            "amount": 200000,
+            "status": "Pending",
+            "phoneNumber": "07086673506",
+            "transactionDate": "2022-01-11",
+            "reason": "Double Debit",
+            "responseDescription": "Not sufficient funds",
+            "responseCode": "51",
+            "logCode": "",
+            "dateVerified": "",
+            "verifiedBy": "",
+            "verifierComment": "No Comments",
+            "dateApproved": "",
+            "approvedBy": "",
+            "approverComment": "No Comments",
+            "loggedDate": "2022-01-11"
+}, {
+   "id": 8491,
+"maskedPan": "519911******0117",
+"paymentRef": "004698192825",
+"tid": "2035U967",
+"transactionStan": 503522,
+"amount": 50000,
+"status": "Processing",
+20
+"phoneNumber": "07086673506",
+"transactionDate": "2022-01-10",
+"reason": "Double Debit",
+"responseDescription": "Not sufficient funds",
+"responseCode": "51",
+"logCode": "N/A",
+"dateVerified": "2022-01-11",
+"verifiedBy": "IGINLA  ABDULHAKEEM",
+"verifierComment": "TRANSACTION FAILED WITH ERROR RESPONSE \"INSUFFICIENT FUND\"",
+"dateApproved": "",
+"approvedBy": "",
+"approverComment": "TRANSACTION FAILED WITH ERROR RESPONSE \"INSUFFICIENT FUND\"",
+"loggedDate": "2022-01-10"
+} ],
+    "links": {
+        "first": "https://readycash.app/api/agent/disputes/100192?page=1",
+        "last": "https://readycash.app/api/agent/disputes/100192?page=1",
+        "prev": null,
+        "next": null
+}, "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "https://readycash.app/api/agent/disputes/100192",
+        "per_page": 20,
+"to": 2,
+"total": 2 }
+}
+```
+
+</ResponseExample>

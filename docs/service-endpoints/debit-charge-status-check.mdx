@@ -1,0 +1,21 @@
+---
+title: "Demit/Charge Status Check"
+description: "This endpoint is utilized to check the status of a debit and charge request on a customer wallet"
+api: "GET
+  /api/provider/wallets/transactions/charge/:accountNumber/:transactionRef/status"
+---
+
+<ResponseExample>
+
+```json Response
+{
+  "accountNumber": "500000007",
+  "responseCode": "0000",
+  "hash": "ltwasp90refhosihfoidshfosdr",
+  "additionalFee": "10.00",
+  "availableBalance": "0.00",
+  "ledgerBalance": "0.00"
+}
+```
+
+</ResponseExample>

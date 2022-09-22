@@ -1,0 +1,44 @@
+---
+title: "Create Customer Wallet"
+description: "This method is called to create customer wallet with and account which would be activated with OTP."
+api: "POST /api/provider/wallets/create"
+---
+
+<RequestExample>
+
+```json Request
+{
+"phone”: "08034730301",
+"address" : "295 Herbert Macaulay Rd Yaba",
+"email" : "tola@anafricanfuture.com",
+"addressState" : "Lagos",
+"addressCity" : "Yaba",
+"firstName" : "Tola",
+"lastName" :"Future",
+"gender" : "M",
+"dateOfBirth" : "468793200000",
+"bvn" : "2210808767677",
+"account" :{"alias" : "Tola Main", "currencyCode" :"NGN"}
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "alias": "Tola Main",
+  "accountNumber": "5000001766",
+  "currency": "NGN",
+  "createdOn": 1636404974795,
+  "activatedOn": null,
+  "authToken": null,
+  "owner": {
+    "productName": "PAYZONE"
+  },
+  "active": false
+}
+```
+
+</ResponseExample>

@@ -1,0 +1,37 @@
+---
+title: "Charge and Debit  Customber Wallet"
+description: "This endpoint is utilized to charge or debit customer wallet for funds."
+api: "POST /api/provider/wallets/transactions/charge"
+---
+
+<RequestExample>
+
+```json Request
+{
+"fromAccountNumber" : "5000000020",
+"amount”: "100.00",
+"memo”: "bank transfer",
+"transactionRef”: "459685869586"
+}
+
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "code": "0000",
+  "desc": "Approved or completed successfully",
+  "retRef": "463988",
+  "stan": "000000000012",
+  "transdatetime": "20200621203645",
+  "bvn": null,
+  "voucher": "459685869586",
+  "extra": "",
+  "pin": ""
+}
+```
+
+</ResponseExample>
