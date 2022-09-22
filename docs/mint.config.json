@@ -18,6 +18,9 @@
     "ultraLight": "#FBF3F0",
     "ultraDark": "#CA4007"
   },
+  "topAnchor": {
+    "name": "ReadyCash"
+  },
   "topbarLinks": [
     {
       "name": "Contact Us",
@@ -38,7 +41,7 @@
   ],
   "navigation": [
     {
-      "group": "ReadyCash Customer Service API",
+      "group": "Customer Service API",
       "pages": ["introduction", "general-flow", "api-service-url"]
     },
     {
