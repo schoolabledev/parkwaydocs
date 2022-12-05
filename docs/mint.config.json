@@ -41,11 +41,17 @@
   ],
   "navigation": [
     {
-      "group": "Customer Service API",
+      "group": "Parkway Rails API",
       "pages": ["introduction", "general-flow", "api-service-url"]
     },
+    
     {
-      "group": "Service Endpoints",
+      "group": "Service Endpoints", 
+      {
+      "group" : "Administration", "pages" : [
+       "service-endpoints/create-customer-wallet",
+      ]
+      }
       "pages": [
         "service-endpoints/create-customer-wallet",
         "service-endpoints/activate-customer-wallet",
