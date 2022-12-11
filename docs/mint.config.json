@@ -1,98 +1,92 @@
 {
-  "name": "Parkway",
-  "favicon": "/favicon.png",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "api": {
-    "baseUrl": "https://62.173.32.30:8080",
-    "auth": {
-      "method": "bearer"
-    }
-  },
-  "colors": {
-    "primary": "#F9956B",
-    "light": "#FBBFA6",
-    "dark": "#E05115",
-    "ultraLight": "#FBF3F0",
-    "ultraDark": "#CA4007"
-  },
-  "topAnchor": {
-    "name": "ReadyCash"
-  },
-  "topbarLinks": [
-    {
-      "name": "Contact Us",
-      "url": "https://schoolable.co/contact"
-    }
-  ],
-  "topbarCtaButton": {
-    "url": "https://parkway.ng/get-demo",
-    "name": "Get demo"
-  },
-  "anchors": [
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "color": "#251F68",
-      "url": "https://blog.schoolable.co/"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Parkway Rails API",
-      "pages": ["introduction", "general-flow", "api-service-url"]
-    },
-    
-    {
-      "group": "Service Endpoints", 
-      {
-      "group" : "Administration", "pages" : [
-       "service-endpoints/create-customer-wallet",
-      ]
-      }
-      "pages": [
-        "service-endpoints/create-customer-wallet",
-        "service-endpoints/activate-customer-wallet",
-        "service-endpoints/add-account-to-wallet",
-        "service-endpoints/get-wallet-balance",
-        "service-endpoints/fund-wallet",
-        "service-endpoints/charge-debit-customer-wallet",
-        "service-endpoints/debit-charge-status-check",
-        "service-endpoints/fund-wallet-transaction-status-check",
-        "service-endpoints/transaction-statement-list",
-        "service-endpoints/update-owner-bvn",
-        "service-endpoints/integration-modalities-callback",
-        "service-endpoints/dispute-logging",
-        "service-endpoints/get-dispute-logged",
-        "service-endpoints/get-dispute-history"
-      ]
-    },
-    {
-      "group": "Response Codes",
-      "pages": [
-        "response-codes/standard-http-status-codes",
-        "response-codes/application-status-codes"
-      ]
-    }
-  ],
-  "footerSocials": [
-    {
-      "type": "twitter",
-      "url": "https://twitter.com/schoolableHQ"
-    },
-    {
-      "type": "facebook",
-      "url": "https://www.facebook.com/schoolableHQ/"
-    },
-    {
-      "type": "linkedin",
-      "url": "https://www.linkedin.com/company/schoolable/"
-    },
-    {
-      "type": "instagram",
-      "url": "https://www.instagram.com/schoolableHQ/"
-    }
-  ]
+	"name": "Parkway",
+	"favicon": "/favicon.png",
+	"logo": {
+		"light": "/logo/light.svg",
+		"dark": "/logo/dark.svg"
+	},
+	"api": {
+		"baseUrl": "https://62.173.32.30:8080",
+		"auth": {
+			"method": "bearer"
+		}
+	},
+	"colors": {
+		"primary": "#F9956B",
+		"light": "#FBBFA6",
+		"dark": "#E05115",
+		"ultraLight": "#FBF3F0",
+		"ultraDark": "#CA4007"
+	},
+	"topAnchor": {
+		"name": "ReadyCash"
+	},
+	"topbarLinks": [{
+		"name": "Contact Us",
+		"url": "https://schoolable.co/contact"
+	}],
+	"topbarCtaButton": {
+		"url": "https://parkway.ng/get-demo",
+		"name": "Get demo"
+	},
+	"anchors": [{
+		"name": "Blog",
+		"icon": "newspaper",
+		"color": "#251F68",
+		"url": "https://blog.schoolable.co/"
+	}],
+	"navigation": [{
+			"group": "Parkway Rails API",
+			"pages": ["introduction", "general-flow", "api-service-url"]
+		},
+		{
+			"group": "Service Endpoints",
+			"pages": [
+        {
+          "group": "Administration",
+          "pages": [
+            "service-endpoints/create-customer-wallet"
+          ]
+        },
+				"service-endpoints/create-customer-wallet",
+				"service-endpoints/activate-customer-wallet",
+				"service-endpoints/add-account-to-wallet",
+				"service-endpoints/get-wallet-balance",
+				"service-endpoints/fund-wallet",
+				"service-endpoints/charge-debit-customer-wallet",
+				"service-endpoints/debit-charge-status-check",
+				"service-endpoints/fund-wallet-transaction-status-check",
+				"service-endpoints/transaction-statement-list",
+				"service-endpoints/update-owner-bvn",
+				"service-endpoints/integration-modalities-callback",
+				"service-endpoints/dispute-logging",
+				"service-endpoints/get-dispute-logged",
+				"service-endpoints/get-dispute-history"
+			]
+		},
+		{
+			"group": "Response Codes",
+			"pages": [
+				"response-codes/standard-http-status-codes",
+				"response-codes/application-status-codes"
+			]
+		}
+	],
+	"footerSocials": [{
+			"type": "twitter",
+			"url": "https://twitter.com/schoolableHQ"
+		},
+		{
+			"type": "facebook",
+			"url": "https://www.facebook.com/schoolableHQ/"
+		},
+		{
+			"type": "linkedin",
+			"url": "https://www.linkedin.com/company/schoolable/"
+		},
+		{
+			"type": "instagram",
+			"url": "https://www.instagram.com/schoolableHQ/"
+		}
+	]
 }
