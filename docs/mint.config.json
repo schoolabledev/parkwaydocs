@@ -6,7 +6,7 @@
 		"dark": "/logo/dark.svg"
 	},
 	"api": {
-		"baseUrl": "https://62.173.32.30:8080",
+		"baseUrl": "https://sandbox.readycashng.com:8447",
 		"auth": {
 			"method": "bearer"
 		}
@@ -19,49 +19,74 @@
 		"ultraDark": "#CA4007"
 	},
 	"topAnchor": {
-		"name": "ReadyCash"
+		"name": "Parkway RAILs"
 	},
-	"topbarLinks": [{
-		"name": "Contact Us",
-		"url": "https://schoolable.co/contact"
-	}],
+	"topbarLinks": [
+		{
+			"name": "Contact Us",
+			"url": "https://parkway.ng/contact-us"
+		}
+	],
 	"topbarCtaButton": {
 		"url": "https://parkway.ng/get-demo",
 		"name": "Get demo"
 	},
-	"anchors": [{
-		"name": "Blog",
-		"icon": "newspaper",
-		"color": "#251F68",
-		"url": "https://blog.schoolable.co/"
-	}],
-	"navigation": [{
-			"group": "Parkway Rails API",
-			"pages": ["introduction", "general-flow", "api-service-url"]
+	"anchors": [
+		{
+			"name": "Blog",
+			"icon": "newspaper",
+			"color": "#251F68",
+			"url": "https://parkway.ng/blog/"
+		}
+	],
+	"navigation": [
+		{
+			"group": "Parkway RAILs API",
+			"pages": [
+				"introduction",
+				"general-flow",
+				"api-service-url"
+			]
 		},
 		{
 			"group": "Service Endpoints",
 			"pages": [
-        {
-          "group": "Administration",
-          "pages": [
-            "service-endpoints/create-customer-wallet"
-          ]
-        },
-				"service-endpoints/create-customer-wallet",
-				"service-endpoints/activate-customer-wallet",
-				"service-endpoints/add-account-to-wallet",
-				"service-endpoints/get-wallet-balance",
-				"service-endpoints/fund-wallet",
-				"service-endpoints/charge-debit-customer-wallet",
-				"service-endpoints/debit-charge-status-check",
-				"service-endpoints/fund-wallet-transaction-status-check",
-				"service-endpoints/transaction-statement-list",
-				"service-endpoints/update-owner-bvn",
-				"service-endpoints/integration-modalities-callback",
-				"service-endpoints/dispute-logging",
-				"service-endpoints/get-dispute-logged",
-				"service-endpoints/get-dispute-history"
+				{
+					"group": "Administration",
+					"pages": [
+						"service-endpoints/admin-login",
+						"service-endpoints/admin-statement"
+					]
+				},
+				{
+					"group": "Wallet Services",
+					"pages": [
+						"service-endpoints/create-customer-wallet",
+						"service-endpoints/activate-customer-wallet",
+						"service-endpoints/add-account-to-wallet",
+						"service-endpoints/get-wallet-balance",
+						"service-endpoints/fund-wallet",
+						"service-endpoints/charge-debit-customer-wallet",
+						"service-endpoints/debit-charge-status-check",
+						"service-endpoints/fund-wallet-transaction-status-check",
+						"service-endpoints/transaction-statement-list",
+						"service-endpoints/update-owner-bvn",
+						"service-endpoints/integration-modalities-callback",
+						"service-endpoints/dispute-logging",
+						"service-endpoints/get-dispute-logged",
+						"service-endpoints/get-dispute-history"
+					]
+				},
+				{
+					"group": "Virtual Account Services",
+					"pages": [
+						"service-endpoints/virtual-account-introduction",
+						"service-endpoints/virtual-account-create",
+						"service-endpoints/virtual-account-query",
+						"service-endpoints/virtual-account-partner-maintained"
+
+					]
+				}
 			]
 		},
 		{
@@ -72,21 +97,19 @@
 			]
 		}
 	],
-	"footerSocials": [{
-			"type": "twitter",
-			"url": "https://twitter.com/schoolableHQ"
-		},
+	"footerSocials": [
 		{
-			"type": "facebook",
-			"url": "https://www.facebook.com/schoolableHQ/"
+			"type": "twitter",
+			"url": "https://twitter.com/ParkwayNG"
 		},
+	
 		{
 			"type": "linkedin",
-			"url": "https://www.linkedin.com/company/schoolable/"
+			"url": "https://www.linkedin.com/company/parkwayng/"
 		},
 		{
 			"type": "instagram",
-			"url": "https://www.instagram.com/schoolableHQ/"
+			"url": "https://www.instagram.com/parkway.ng/"
 		}
 	]
 }
