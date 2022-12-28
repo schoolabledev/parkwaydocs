@@ -97,19 +97,9 @@
 			]
 		}
 	],
-	"footerSocials": [
-		{
-			"type": "twitter",
-			"url": "https://twitter.com/ParkwayNG"
-		},
-	
-		{
-			"type": "linkedin",
-			"url": "https://www.linkedin.com/company/parkwayng/"
-		},
-		{
-			"type": "instagram",
-			"url": "https://www.instagram.com/parkway.ng/"
-		}
-	]
+	"footerSocials": {
+		"twitter": "https://twitter.com/ParkwayNG",
+		"linkedin": "https://www.linkedin.com/company/parkwayng/",
+		"instagram": "https://www.instagram.com/parkway.ng/"
+	}
 }
