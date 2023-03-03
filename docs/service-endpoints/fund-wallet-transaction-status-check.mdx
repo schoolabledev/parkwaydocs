@@ -1,8 +1,17 @@
 ---
 title: "Fund Wallet Transaction Status Check"
-api:
-  "GET /api/provider/wallets/transactions/fund/:accountNumber/:yourRef/status"
+api: "GET /api/provider/wallets/transactions/fund/{accountNumber}/{yourRef}/status"
 ---
+
+## Path parameters
+
+<ParamField path="accountNumber" type="number" required>
+  Wallet Account Number
+</ParamField>
+
+<ParamField path="yourRef" type="number" required>
+  Transaction Reference Number
+</ParamField>
 
 <ResponseExample>
 

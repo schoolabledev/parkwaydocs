@@ -4,13 +4,33 @@ description: "This endpoint is utilized to fund customer unique account number c
 api: "POST /api/provider/wallets/transactions/fund"
 ---
 
+## Request parameters
+<ParamField body="toAccountNumber" type="number" required>
+  Customer Wallet Account Number to be Funded
+</ParamField>
+
+<ParamField body="amount" type="number" required>
+  Customer Wallet Account Number to be Funded
+</ParamField>
+
+<ParamField body="memo" type="string" required>
+  Transfer Memo (Comment)
+</ParamField>
+
+<ParamField body="transactionRef" type="string" required>
+  Custom Transaction Reference
+</ParamField>
+
+
+
 <RequestExample>
 
 ```json Request
 {
-"toAccountNumber" : "5000001773", "amount" : "1000.00",
-"memo”: "bank transfer",
-"transactionRef”: "459685869589612345fff"
+  "toAccountNumber": "5000001773",
+  "amount": "1000.00",
+  "memo": "bank transfer",
+  "transactionRef": "459685869589612345fff"
 }
 ```
 

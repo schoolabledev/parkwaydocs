@@ -1,7 +1,8 @@
 ---
 title: "Add Account to Wallet"
 description: "This endpoint is utilized to add multiple account to a customer wallet created with customer unique phone number which returns a sub wallet account number."
-api: "POST /api/provider/wallets/:phoneNumber/accounts/add"
+api: "POST /api/provider/wallets/{phoneNumber}/accounts/add"
+contentType: "application/json"
 ---
 
 <RequestExample>
@@ -33,3 +34,23 @@ api: "POST /api/provider/wallets/:phoneNumber/accounts/add"
 ```
 
 </ResponseExample>
+
+## Path parameters
+
+<ParamField path="phoneNumber" type="number" required>
+  Wallet Phone Number
+</ParamField>
+
+## Request parameters
+
+<ParamField body="alias" type="string" required>
+  Account Name
+</ParamField>
+
+
+<ParamField body="currencyCode" type="number" required default="566">
+  Currency Code
+</ParamField>
+
+
+
