@@ -1,0 +1,47 @@
+---
+title: "Query Virtual Account"
+description: "This method used to query transactions done against a virtual account."
+api: "GET /rc/rest/agent/virtual_account/check/:accountNumber"
+---
+
+This endpoint would return a list of transactions made against a particular virtual account
+this only works for RAILs maintained virtual account that have a `ttl` shorter than 24hrs
+it is useful for timebound payments where the parner wants to poll rather than wait for a callback
+
+
+ <ParamField path="accountNumber" type="string"  required >
+  The virtual account number to query for
+</ParamField>
+
+
+
+
+<ResponseExample>
+
+```json Response
+{
+"code": "0000",
+"desc": "transactions available",
+"transactions": [
+	{
+	"sessionId": "000005190428031850006515808174",
+	"amount": 200.00,
+	"queryResponse": 00,
+	"receipt": 000005190428031850006515808174,
+	"channel": "VIRTUAL",
+	"sendingTerminal": null,
+	"senderAccount": "0016990376",
+	"transmissionDate": null,
+	"logDate": 1556617785000,
+	"queried": false,
+	"reverse": false,
+	"narration": "NIP - TRF IFO JIMMY CHOO. TEST FRM ISSEY MIYAKE",
+	"beneficiaryAccount": "0406551129",
+	"channelCode": "3",
+	"accountRange": null
+	}]
+}
+```
+
+</ResponseExample>
+

@@ -1,0 +1,51 @@
+---
+title: "Create Virtual Account"
+description: "This method used to create a virtual account."
+api: "POST /rc/rest/agent/virtual_account/create"
+---
+
+Operating in _**RAILs Maintained**_ as explained in the introduction requires a call to be made to the R-VAS to create a VA and return a virtual account number.
+
+<RequestExample>
+
+```json Request
+{
+	"account_name" : "JEAN PAUL GUATIER",
+	"amount" : "0.00",
+	"ttl" : 30000,
+	"multi" : true,
+	"exact_amount" : false,
+	"external_ref" :"efg7@38"
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+"accountNumber": "0406551129",
+"dateCreated": 1575411520299,
+"expiryDate": 1577211520299,
+"status": 1,
+"accountName": "JIMMY CHOO",
+"multiUse": true,
+"ttl": 30000,
+"amount": 0.00,
+"exactAmount": false,
+"externalRef": "efg7@38"
+}
+```
+
+</ResponseExample>
+
+| parameter | description | mandatory
+|-------------|---------------|--------
+`account_name` | name to be tied to the created virtual account, this name will show up on channels that require name verification before payment| yes
+`amount` | amount to be collected, this parameter is ignored except the `exact_amount` parameter is set to `true`| yes
+`ttl`|this sets the expiry date of the virtual account in minutes, if the `multi` parameter is set to `false` the account would expire immediately a payment is made against it|yes
+`exact_amount`| boolean to set if the exact amount must be paid|yes
+`multi` | boolean to set if multiple payments can be made against the account, in a case where `multi` and `exact_amount` are set, the same amount would be required each time a payment is made against the VA| yes
+`external_ref`| unique identifier for the IM, this must be unique for all calls made to this endpoint per IM|yes 
+`account_number`| the VA created payments can be made against this VA from every supporting channel|yes  

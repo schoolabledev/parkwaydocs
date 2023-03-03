@@ -2,14 +2,17 @@
 title: "Activate Customer Wallet"
 description: "This endpoint is utilized immediately after creating the customer wallet which is inactive with the otp sent to the customer via sms to activate the wallet."
 api: "POST /api/provider/wallets/activate"
+contentType: "application/json"
 ---
+<Tip>
+  For Test environment please use any random 6 digit Number. On Production,
+  Customer would recieve a 6 digit OTP
+</Tip>
 
 <RequestExample>
 
 ```json Request
-{ "accountNumber”: "5000001766",
-"otp": "552587"
-}
+{ "accountNumber": "5000001766", "otp": "552587" }
 ```
 
 </RequestExample>
@@ -18,17 +21,27 @@ api: "POST /api/provider/wallets/activate"
 
 ```json Response
 {
-"alias": "Tola Main",
-"accountNumber": "5000001766",
-"currency": "NGN",
-"createdOn": 1636404975000,
-"activatedOn": 1636405184702, "authToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLTUwMDAwMDE3 NjYiL
-CJyb2xlcyI6W10sImlzcyI6InJlYWR5Y2FzaCIsIlNlc3Npb25JRCI6IlNDSE9PTEFCTE NSCt8PgarCNbxWoCKW4qUKZfa1Pen_FNHfx112jeSbR5Mrc2hRuRL9u0c SxG- Vd8h_6ToaDM_zDHNxw",
-"owner": {
+  "alias": "Tola Main",
+  "accountNumber": "5000001766",
+  "currency": "NGN",
+  "createdOn": 1636404975000,
+  "activatedOn": 1636405184702,
+  "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLTUwMDAwMDE3 NjYiLCJyb2xlcyI6W10sImlzcyI6InJlYWR5Y2FzaCIsIlNlc3Npb25JRCI6IlNDSE9PTEFCTENSCt8PgarCNbxWoCKW4qUKZfa1Pen_FNHfx112jeSbR5Mrc2hRuRL9u0c SxG-Vd8h_6ToaDM_zDHNxw",
+  "owner": {
     "productName": "PAYZONE"
-},
-"active": true
+  },
+  "active": true
 }
 ```
 
 </ResponseExample>
+
+## Request parameters
+
+<ParamField body="accountNumber" type="number" required>
+  AccountNumber tied to Customer Wallet
+</ParamField>
+
+<ParamField body="otp" type="number" required>
+  One Time Password
+</ParamField>

@@ -1,0 +1,71 @@
+---
+title: "Modalities for Partner Maintained Virtual Accounts"
+---
+
+Alternatively, partners that wish to maintain virtual accounts and have been issued an account block or a prefix
+can  receive payments against those accounts virtual accounts. 
+
+The integrating partner is required to provide 2 endpoints, one to validate the account number and return an account name.
+ 
+This integration mode gives merchants the flexibility of using their customer references/ids as virtual accounts as long as they follow the standard 10 digits length with the issued  
+2 - 4 digit prefix
+
+To validate accounts R-VAS sends a message to a callback URL provided by the partner, and its is expected to return the customers name if successful or an error code if not.
+
+A **Validation** request payload would look like this
+
+
+```json Request
+{ 
+	"custid" : "0607340006",
+	"channel" : "mobile",
+	"mac" : "ab00ff430598409584758675930945823045830495849"
+}
+```
+An expected response would be
+
+``` json Response
+{
+	"responseCode" : "0000",
+	"responseDesc" : "ISSEY MIYAKE"
+}
+```
+
+When payments are recieved through compatible channels, a notification is sent via `HTTP POST` to the partners system via the provided callback resource 
+
+The notification payload would have this format
+
+``` json Notification Payload
+{
+
+"date": "20200709044803",
+"tranid": "14515945",
+"ref": "081241",
+"extra": "{\"sessionId\":\"000014200709044330263217788859\",
+\"amount\":2.5E+2,\"sender\":\"0073XXXX06\",\"senderName\":\"DELE MAJID UDO\",\"senderReference\":\"NXG3475034567\",\"channel\":\"3\",
+\"beneficiary\":\"0602000001\",\"narration\":\"TEST VIRTUAL ACCOUNT\"}",
+"custid": "0602000001",
+"channel": "mobile",
+"amt": "250.00",
+"mac": "a9360820e53918cc919e53612bac404629281901",
+"merchId": "001093",
+"mac_256": "d40baaa24f9bd092be91e9fad91b72366a26fd919ee727d362ad095b5c4f1d29"
+
+}
+```
+For response a on the callback a simple `HTTP 200`  status code will suffice, any other status would be interpreted as a failed notification, unless in special cases the body content of the response to a notification sent this way is never read. 
+R-VAS would continue to send the notification until it receives a `HTTP 200` status from the partner.  
+
+The MAC computed is a keyed MAC, a shared key would be managed between R-VAS and the partner, the MAC should be verified by the partner before any further action is taken 
+​
+
+| Property      | Data Format  | Description                                                         
+| ------------- |---------|--------------------------------------|
+| `custid`        | `string`     |                  the unique customer id recognized by the merchant or the invoice number for a payment or a virtual account hosted by the merchant                            
+| `channel`       | `string`                       | The channel through which the validation call is being made. This will typically be one of these options - `web`, `pos`, `mobile`, `bank`   
+|`ref`|`string`|This is a payment reference number used to track a transaction. In cases where the merchant generates e-receipt, it is advised that the parameter be included in the e-receipt. 
+|`extra`|`json-string`| A json string dump of bank transfer specific information which includes information of the sender and the senders financial institution  
+|`amt`|`decimal(12,2)`|This specifies the amount paid by the customer/agent.  It always carries a 2 decimal place digit indicating the minor denomination of the currency paid with  
+|`date`|`string`| string representation of the date time of the transaction in the format `yyyyMMddhhmmss`   
+|`merchId` |`string` |merchant ID issued to the IM since multiple merchant IDs can be issued to a single IM, this is used to track which ID the particular transaction was made against                           
+| `mac`           | `string`                       | The keyed HMAC SHA1 sum of the parameters in Hex when the parameters are available in the message they must always be MAC'd in this order `mac = hmac_sha1(custid  +  ref  +  amt  +  date  +  channel)` 

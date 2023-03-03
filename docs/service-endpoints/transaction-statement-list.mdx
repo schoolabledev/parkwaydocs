@@ -1,8 +1,14 @@
 ---
 title: "Transaction Statement / Transaction List"
 description: "This endpoint is utilized to get a transaction statement and retrieve a list of transaction on a wallet"
-api: "GET /api/provider/wallets/wallets/:accountNumber/statement"
+api: "GET /api/provider/wallets/{accountNumber}/statement"
 ---
+
+## Path parameters
+
+<ParamField path="accountNumber" type="number" required>
+  Wallet Account Number
+</ParamField>
 
 <ResponseExample>
 

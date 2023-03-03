@@ -1,0 +1,23 @@
+---
+title: "Virtual Account Introduction"
+---
+
+The RAILs Virtual Account System **(R-VAS)** API gives you access to create, manage and make payments to publicly accessible wallet accounts maintained by the RAILs or the integrating partner.
+
+The virtual account enables an integrating partner to receive customer payments using the account number as an identifier for a customer, a specific transaction, or an invoice.
+
+R-VAS Operates in 2 modes
+#### 1. RAILs Maintained 
+In this mode, the merchant makes an API call to RVAS to create a virtual account. Virtual accounts created this way have the following attributes.  
+
+  - **expires**: An expiry timestamp may be specified to invalidate the virtual account. This is useful when the IM requires payments are made against it within a specific period.
+  - **tied to an amount**: A virtual account can be tied to a specific amount. This attribute is useful when the partner requires that a specific amount be paid against the virtual account
+  - **used multiple times**: a virtual can be configured to allow single or multiple payments against it.
+
+#### 2. Partner Maintained
+In this mode, the R-VAS issues a block of account numbers typically identified with a 2- 4 digit prefix to the partner. When payments or inquiries are made against any account number that pattern matches a maintained block, R-VAS makes a callback request to the partner's system to validate (in real-time) and to notify of payments. R-VAS does not take care of the actual VA numbers and is only aware of a specific number pattern. other attributes of VAs 
+managed this way are  
+
+- **can expire** : since the integrating partner maintains the actual virtual account numbers and has somehow communicated them to the users. They can be set to expire on the partners' system
+- **cannot be tied to an amount**: All amounts are accepted by the integrating partner except in cases where R-VAS has set a predefined minimum
+- **can be used multiple times:**   Multiple payments will be made against it.
