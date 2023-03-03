@@ -2,36 +2,41 @@
 title: "Retrieve Bearer Token"
 description: "This endpoint is called to get a bearer token to authenticate all API calls"
 api: "POST /rc/rest/agent/login"
-auth: "none"
 contentType: "application/x-www-form-urlencoded"
-
+auth: "none"
 ---
 
-All API calls except this one requires a Bearer token, to recieve this token the integrating partner is expected to provide credentials issued for sandbox Testing
-kindly reach out to us on [here](parkway.ng/get-demo) if you do not have this credentials 
+<Tip>Ensure ContentType is set to application/x-www-form-urlencoded</Tip>
 
-
-
+All API calls except this one requires a Bearer token, to recieve this token the
+integrating partner is expected to provide credentials issued for sandbox Testing
+kindly reach out to us on [here](parkway.ng/get-demo) if you do not have this credentials
 
 ## Request Parameters
 
- <ParamField query="userName" type="string"  required >
-  Agent ID/Wallet ID of the partner  usually numeric 6 or 10 digits
+<ParamField query="userName" type="string" required>
+  Agent ID/Wallet ID of the partner usually numeric 6 or 10 digits
 </ParamField>
 
-<ParamField query="password" type="string" required >
-  Agents Password, if you have received a clear password, this parameter would take the SHA256 hash of the password recieved. 
+<ParamField query="password" type="string" required>
+  Agents Password, if you have received a clear password, this parameter would
+  take the SHA256 hash of the password recieved.
 </ParamField>
 
-<ParamField query="sessionLength" type="int" optional placeholder="30">
+<ParamField query="sessionLength" type="number" optional placeholder="30">
   Token validity length in minutes, default is 30 minutes
 </ParamField>
 
-
 ## Response Headers
 
-<ResponseField header="username" name="Authorization" type="string" required>
-  The bearer token
+<ResponseField name="Authorization" type="string">
+  The bearer token for authentication
 </ResponseField>
 
+<ResponseField name="PWK" type="string">
+  PWK
+</ResponseField>
 
+<ResponseField name="SessionID" type="string">
+  Session ID token
+</ResponseField>

@@ -55,6 +55,7 @@
 					"group": "Administration",
 					"pages": [
 						"service-endpoints/admin-login",
+						"service-endpoints/base-wallet-balance",
 						"service-endpoints/admin-statement"
 					]
 				},
@@ -71,7 +72,12 @@
 						"service-endpoints/fund-wallet-transaction-status-check",
 						"service-endpoints/transaction-statement-list",
 						"service-endpoints/update-owner-bvn",
-						"service-endpoints/integration-modalities-callback",
+						"service-endpoints/integration-modalities-callback"
+					]
+				},
+				{
+					"group": "Disputes",
+					"pages": [
 						"service-endpoints/dispute-logging",
 						"service-endpoints/get-dispute-logged",
 						"service-endpoints/get-dispute-history"
@@ -84,7 +90,6 @@
 						"service-endpoints/virtual-account-create",
 						"service-endpoints/virtual-account-query",
 						"service-endpoints/virtual-account-partner-maintained"
-
 					]
 				}
 			]

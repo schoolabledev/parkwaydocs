@@ -1,9 +1,18 @@
 ---
 title: "Charge Status Check"
 description: "This endpoint is utilized to check the status of a debit and charge request on a customer wallet"
-api: "GET
-  /api/provider/wallets/transactions/charge/:accountNumber/:transactionRef/status"
+api: "GET /api/provider/wallets/transactions/charge/{accountNumber}/{transactionRef}/status"
 ---
+
+## Path parameters
+
+<ParamField path="accountNumber" type="number" required>
+  Wallet Account Number
+</ParamField>
+
+<ParamField path="transactionRef" type="string" required>
+  Transaction Reference
+</ParamField>
 
 <ResponseExample>
 

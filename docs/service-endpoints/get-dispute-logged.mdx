@@ -1,8 +1,19 @@
 ---
 title: "Get Dispute Logged"
 description: "This endpoint is utilized by partner institutions to get dispute already logged."
-api: "GET /api/agent/:agentId/disputes/:disputeId"
+api: "GET http://test.agentprofile.parkwayprojects.xyz:1900/api/agent/{agentId}/disputes/{disputeId}"
+auth: "none"
 ---
+
+## Path parameters 
+
+<ParamField path="agentId" type="number" required>
+  Partners ID
+</ParamField>
+
+<ParamField path="disputeId" type="number" required>
+  Dispute ID
+</ParamField>
 
 <ResponseExample>
 

@@ -1,24 +1,76 @@
 ---
 title: "Create Customer Wallet"
-description: "This method is called to create customer wallet with and account which would be activated with OTP."
+description: "This method is called to create customer wallet with and account which would be activated with OTP"
 api: "POST /api/provider/wallets/create"
+contentType: "application/json"
 ---
+
+## Request parameters
+<ParamField body="phone" type="string" required>
+  Customer Phone Number
+</ParamField>
+
+<ParamField body="email" type="string" required>
+  Customer's Email Address
+</ParamField>
+
+<ParamField body="address" type="string" required>
+  Customers' Address
+</ParamField>
+
+<ParamField body="addressState" type="string" required>
+  Address State
+</ParamField>
+
+<ParamField body="addressCity" type="string" required>
+  Address City
+</ParamField>
+
+<ParamField body="firstName" type="string" required>
+  Customer's First Name
+</ParamField>
+
+<ParamField body="lastName" type="string" required>
+  Customer's Last Name
+</ParamField>
+
+<ParamField body="dateOfBirth" type="number" required>
+  Customer's Date of Birth
+</ParamField>
+
+<ParamField body="bvn" type="number" required>
+  Customer's Bank Verification Number
+</ParamField>
+
+<ParamField body="account" type="object" required>
+  <Expandable type="properties">
+    <ParamField body="alias" type="string" required>
+      Account Alias
+    </ParamField>
+    <ParamField body="currencyCode" type="string" required default="NGN">
+      Account Alias
+    </ParamField>
+  </Expandable>
+</ParamField>
 
 <RequestExample>
 
 ```json Request
 {
-"phone”: "08034730301",
-"address" : "295 Herbert Macaulay Rd Yaba",
-"email" : "tola@anafricanfuture.com",
-"addressState" : "Lagos",
-"addressCity" : "Yaba",
-"firstName" : "Tola",
-"lastName" :"Future",
-"gender" : "M",
-"dateOfBirth" : "468793200000",
-"bvn" : "2210808767677",
-"account" :{"alias" : "Tola Main", "currencyCode" :"NGN"}
+  "phone": "08034730301",
+  "address": "295 Herbert Macaulay Rd Yaba",
+  "email": "tola@anafricanfuture.com",
+  "addressState": "Lagos",
+  "addressCity": "Yaba",
+  "firstName": "Tola",
+  "lastName": "Future",
+  "gender": "M",
+  "dateOfBirth": "468793200000",
+  "bvn": "2210808767677",
+  "account": {
+    "alias": "Tola Main",
+    "currencyCode": "NGN"
+  }
 }
 ```
 

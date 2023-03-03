@@ -1,6 +1,5 @@
 ---
-title: "Integration Modalities for Callback/Inbound Bank Transfer Transaction
-  Callback"
+title: "Integration Modalities for Callback/Inbound Bank Transfer Transaction Callback"
 ---
 
 This functionality is to be implemented by partner institutions to enable real
@@ -13,14 +12,14 @@ bank transfer. It should be a Restful HTTP service endpoint with **ContentType
 
 ```json Request
 {
-  "accountNumber”:"500000007",
-  "transactionType”: "01",
-  "transactionTypeDescription”: "CASH WITHDRAWAL", "terminalId”: "10000057",
-  "terminalNameLocation”: "GTB ATM GALLERY ALAGOMEJI", "channel”: "1",
-  "narration”: "GTB ATM GALLERY LA NG",
-  "maskedPan”: "568012********1234",
-  "amount”: "2300.00",
-  "surcharge”:"65.00",
+  "accountNumber":"500000007",
+  "transactionType": "01",
+  "transactionTypeDescription": "CASH WITHDRAWAL", "terminalId": "10000057",
+  "terminalNameLocation": "GTB ATM GALLERY ALAGOMEJI", "channel": "1",
+  "narration": "GTB ATM GALLERY LA NG",
+  "maskedPan": "568012********1234",
+  "amount": "2300.00",
+  "surcharge":"65.00",
   "transmissionDate": 1641416850000,
   "reference": "000014220105220758286449969201",
   "transactionState": "FINAL"
@@ -32,11 +31,11 @@ bank transfer. It should be a Restful HTTP service endpoint with **ContentType
 ```json Response
 {
   "accountNumber": "500000007",
-  "responseCode”: "0000",
-  "hash”: "ltwasp90refhosihfoidshfosdr",
-  "additionalFee”: "10.00",
-  "availableBalance”: "0.00",
-  "ledgerBalance”: "0.00"
+  "responseCode": "0000",
+  "hash": "ltwasp90refhosihfoidshfosdr",
+  "additionalFee": "10.00",
+  "availableBalance": "0.00",
+  "ledgerBalance": "0.00"
 }
 ```
 
@@ -60,7 +59,7 @@ and the channel options are
 TransactionState defines the state of the transaction at the instance of
 callback. It values includes
 
-“FINAL” - Transaction is completed on our end, and outcome unaffected by the
+“FINAL" - Transaction is completed on our end, and outcome unaffected by the
 response to the callback notification.
 
 "TRANSIENT" – Transaction is still being processed, and response to the callback

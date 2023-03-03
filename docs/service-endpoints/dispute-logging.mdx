@@ -1,8 +1,56 @@
 ---
 title: "Dispute Logging"
 description: "This endpoint is utilized by partner institutions to log disputes within its system to the readycash service for resolution."
-api: "POST /api/agent/disputes/create"
+api: "POST http://test.agentprofile.parkwayprojects.xyz:1900/api/agent/disputes/create"
+auth: "none"
 ---
+
+## Request Parameters
+
+
+<ParamField body="agentId" type="number" required>
+  Partner ID
+</ParamField>
+
+<ParamField body="tid" type="string" required>
+  Transaction ID
+</ParamField>
+
+<ParamField body="transactionStan" type="string" required>
+  Transaction STAN
+</ParamField>
+
+<ParamField body="maskedPan" type="string" required>
+  Masked Pan
+</ParamField>
+
+<ParamField body="transactionDateTime" type="string" required>
+  transaction DateTime(milliseconds)
+</ParamField>
+
+<ParamField body="paymentRef" type="string" required>
+  Payment Reference
+</ParamField>
+
+<ParamField body="amount" type="string" required>
+  Amount
+</ParamField>
+
+<ParamField body="phoneNumber" type="string" required>
+  Phone Number
+</ParamField>
+
+<ParamField body="reason" type="string" required>
+  Reason
+</ParamField>
+
+<ParamField body="responseDescription" type="string" required>
+  Transaction Response Description
+</ParamField>
+
+<ParamField body="responseCode" type="string" required>
+  Transaction Response Code
+</ParamField>
 
 <RequestExample>
 
