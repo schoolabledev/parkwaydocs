@@ -67,6 +67,7 @@
 						"service-endpoints/add-account-to-wallet",
 						"service-endpoints/get-wallet-balance",
 						"service-endpoints/fund-wallet",
+						"service-endpoints/transfer-between-wallets",
 						"service-endpoints/charge-debit-customer-wallet",
 						"service-endpoints/debit-charge-status-check",
 						"service-endpoints/fund-wallet-transaction-status-check",
