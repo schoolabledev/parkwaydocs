@@ -2,12 +2,32 @@
 title: "Update Customer Wallet Owner with BVN"
 description: "This endpoint is utilized to update Customer Wallet owner details with BVN."
 api: "PATCH /api/provider/wallets/{walletAccountNumber}/update"
+authMethod: "bearer"
 ---
 
 ## Path parameters
 
 <ParamField path="walletAccountNumber" type="number" required>
   Customers Wallet Account Number
+</ParamField>
+
+## Request parameters
+
+<ParamField body="bvn" type="number" required>
+  Customers New BVN Number
+</ParamField>
+
+
+<ParamField body="firstName" type="string" required>
+  Customers BVN Last Name
+</ParamField>
+
+<ParamField body="lastName" type="string" required>
+  Customers New BVN Number
+</ParamField>
+
+<ParamField body="address" type="string" required>
+  Customers Address
 </ParamField>
 
 <RequestExample>

@@ -1,0 +1,39 @@
+---
+title: "Wallet to Wallet Transfer"
+description: "This endpoint is utilized to perform Customer wallet to wallet transfer."
+api: "POST /api/provider/wallets/transactions/transfer"
+---
+
+## Request parameters
+
+<ParamField body="fromAccountNumber" type="number" required>
+  Wallet Account Number to be Debited 
+</ParamField>
+
+<ParamField body="amount" type="number" required>
+  Amount to be debited
+</ParamField>
+
+<ParamField body="memo" type="string" required>
+  Transfer Memo
+</ParamField>
+
+<ParamField body="toAccountNumber" type="number" required>
+  Wallet Account Number to be Created
+</ParamField>
+
+<ParamField body="transactionRef" type="number" required>
+  Unique Custom transaction Reference
+</ParamField>
+
+<RequestExample>
+```json Request Sample
+{
+    "fromAccountNumber": "5000001089",
+    "amount": "1000.00",
+    "memo": "transfer between wallets",
+    "toAccountNumber" : "5000001058",
+    "transactionRef": "459685869586"
+}
+```
+</RequestExample>

@@ -1,0 +1,58 @@
+---
+title: "Wallet Transfer to Bank Account"
+description: "This endpoint is utilized to debit and initiate customer wallet transfer to a verified bank account using the account name enquiry endpoint."
+api: "POST /api/provider/wallets/transactions/banktransfer"
+---
+
+## Request Example
+
+<ParamField body="fromAccountNumber" type="number" required>
+  Wallet Account Number to Deduct from
+</ParamField>
+
+<ParamField body="toAccountNumber" type="number" required>
+  Bank Account Number to receive theFund
+</ParamField>
+
+<ParamField body="toAccountName" type="number" required>
+  Bank Account Name
+</ParamField>
+
+<ParamField body="destinationBankCode" type="number" required>
+  Bank Account Code. please refer to [bank code section](service-endpoints/financial-institutions/microfinance-others-banks)
+</ParamField>
+
+
+<RequestExample>
+```json Request Sample
+{
+  "fromAccountNumber": "500000007",
+  "toAccountNumber": "3455304064",
+  "toAccountName": "Parkway Account",
+  "destinationBankCode": "058",
+  "amount": "50.00",
+  "memo": "Transfer to Parkway"
+}
+```
+</RequestExample>
+
+<ResponseExample>
+```json Response Sample
+{
+ "code": "0000",
+ "desc": "Approved or completed successfully",
+ "ledgerBalance": "500.00",
+ "availableBalance": "500.00",
+ "statement": "",
+ "extendedMsg": "",
+ "retref": "",
+ "stan": "",
+ "transDatetime": "",
+ "status": "",
+ "narration": "",
+ "bvn": "",
+ "voucher": "459685869586",
+ "extra": ""
+}
+```
+</ResponseExample>
