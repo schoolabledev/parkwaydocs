@@ -41,7 +41,7 @@ bank transfer. It should be a Restful HTTP service endpoint with **ContentType
 
 <Note>
 
-Transaction Type in the request payload includes “01" - Cash Withdrawal
+Transaction Type in the request payload includes "01" - Cash Withdrawal
 
 - "00" - Goods and services
 - "40" - Payment from account
@@ -59,7 +59,7 @@ and the channel options are
 TransactionState defines the state of the transaction at the instance of
 callback. It values includes
 
-“FINAL" - Transaction is completed on our end, and outcome unaffected by the
+"FINAL" - Transaction is completed on our end, and outcome unaffected by the
 response to the callback notification.
 
 "TRANSIENT" – Transaction is still being processed, and response to the callback

@@ -65,23 +65,25 @@
 						"service-endpoints/create-customer-wallet",
 						"service-endpoints/activate-customer-wallet",
 						"service-endpoints/add-account-to-wallet",
+						"service-endpoints/update-owner-bvn",
 						"service-endpoints/get-wallet-balance",
 						"service-endpoints/fund-wallet",
-						"service-endpoints/transfer-between-wallets",
+						"service-endpoints/fund-wallet-transaction-status-check",
 						"service-endpoints/charge-debit-customer-wallet",
 						"service-endpoints/debit-charge-status-check",
-						"service-endpoints/fund-wallet-transaction-status-check",
+						"service-endpoints/transfer-between-wallets",
+						"service-endpoints/bank-account-name-enquiry",	
+						"service-endpoints/wallet-transfer-to-bank-account",
 						"service-endpoints/transaction-statement-list",
-						"service-endpoints/update-owner-bvn",
 						"service-endpoints/integration-modalities-callback"
 					]
 				},
 				{
-					"group": "Disputes",
+					"group": "CBN Approved Financial Institutions",
 					"pages": [
-						"service-endpoints/dispute-logging",
-						"service-endpoints/get-dispute-logged",
-						"service-endpoints/get-dispute-history"
+						"service-endpoints/financial-institutions/microfinance-others-banks",
+						"service-endpoints/financial-institutions/mobile-money-operators",
+						"service-endpoints/financial-institutions/banks"
 					]
 				},
 				{

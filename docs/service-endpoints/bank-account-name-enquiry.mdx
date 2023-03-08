@@ -1,0 +1,40 @@
+---
+title: "Bank Account Name Enquiry"
+description: "This endpoint is used to verify a Bank Account Number using the CBN bank code."
+api: "POST /rc/rest/agent/transact/nameenquiry"
+---
+
+## Request parameters
+
+<ParamField body="accountNumber" type="string" required>
+  NUBAN Account Number
+</ParamField>
+
+<ParamField body="bankCode" type="string" required>
+  NUBAN Account Number
+</ParamField>
+
+<RequestExample>
+```json Request Example
+{
+ "accountNumber": "3464643636",
+ "bankCode": "058" 
+}
+```
+</RequestExample>
+
+<ResponseExample>
+```json Response Sample
+{
+ "code": "00",
+ "desc": "PARKWAY ACCOUNT",
+ "retRef": "",
+ "stan": null,
+ "transdatetime": "",
+ "bvn": "",
+ "voucher": "",
+ "extra": "",
+ "pin": ""
+}
+```
+</ResponseExample>
