@@ -1,0 +1,20 @@
+---
+title: Wallets Pool Balances
+api: "GET /api/provider/wallets/balances"
+description: "This endpoints provides the sum total balance of all Customer wallets balance."
+---
+
+<Tip>This amount does not include the Base Wallet Balance</Tip>
+
+<ResponseExample>
+```json Response Sample
+{
+    "accountNumber": "ALL",
+    "alias": "PAYZONE",
+    "ledgerBalance": 2872465578.90,
+    "availableBalance": 2872465578.90,
+    "unclearedEffects": 0.00,
+    "asAt": 1677708490761
+}
+```
+</ResponseExample>

@@ -72,9 +72,10 @@
 						"service-endpoints/charge-debit-customer-wallet",
 						"service-endpoints/debit-charge-status-check",
 						"service-endpoints/transfer-between-wallets",
-						"service-endpoints/bank-account-name-enquiry",	
+						"service-endpoints/bank-account-name-enquiry",
 						"service-endpoints/wallet-transfer-to-bank-account",
 						"service-endpoints/transaction-statement-list",
+						"service-endpoints/wallets-pool-balances",
 						"service-endpoints/integration-modalities-callback"
 					]
 				},
