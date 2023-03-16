@@ -7,7 +7,7 @@ api: "POST /api/provider/wallets/transactions/transfer"
 ## Request parameters
 
 <ParamField body="fromAccountNumber" type="number" required>
-  Wallet Account Number to be Debited 
+  Wallet Account Number to be Debited
 </ParamField>
 
 <ParamField body="amount" type="number" required>
@@ -37,3 +37,19 @@ api: "POST /api/provider/wallets/transactions/transfer"
 }
 ```
 </RequestExample>
+
+<ResponseExample>
+```json Response Sample
+{
+    "code": "0000",
+    "desc": "Your transfer of N300.0 to 8441030775 was successful\r\nFee N0\r\nDate 13/03/23 9:49 PM\r\nRef# 249339\r\nYour current balances\r\nLedger :N700.00\r\nAvailable :N700.00",
+    "retRef": "249339",
+    "stan": "000000372036",
+    "transdatetime": "20230313214938",
+    "bvn": null,
+    "voucher": "transfer between wallets",
+    "extra": "",
+    "pin": ""
+}
+```
+</ResponseExample>
