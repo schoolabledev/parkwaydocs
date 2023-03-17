@@ -4,7 +4,10 @@ description: "This endpoint is utilized to get a transaction statement and retri
 api: "GET /api/provider/wallets/{accountNumber}/statement"
 ---
 
-<Tip>To improve query efficiency please ensure you paginate queries and if possible scope your queries by date using the query parameters</Tip>
+<Tip>
+  To improve query efficiency please ensure you paginate queries and if possible
+  scope your queries by date using the query parameters
+</Tip>
 
 ## Path parameters
 
@@ -14,7 +17,9 @@ api: "GET /api/provider/wallets/{accountNumber}/statement"
 
 ## Query Parameters
 
- <ParamField query="start_date" type="number" placeholder="1110000000">
+{" "}
+
+<ParamField query="start_date" type="number" placeholder="1110000000">
   UTC date/time stamp in milliseconds for the start date of the query
 </ParamField>
 
@@ -27,18 +32,18 @@ api: "GET /api/provider/wallets/{accountNumber}/statement"
 </ParamField>
 
 <ParamField query="page" type="number" optional default="1">
-  The current page of the records to return, default is 1, max is total records/pageSize this is a '1' index parameter
+  The current page of the records to return, default is 1, max is total
+  records/pageSize this is a '1' index parameter
 </ParamField>
 
-<ParamField query="wrap" type="boolean" placeholder="true" default="true" >
-  This parameter must be set to `true` to ensure response is wrapped in pagination format, if not set the response is returned 
-  flat, fit only for infinite loading
+<ParamField query="wrap" type="boolean" placeholder="true" default="true">
+  This parameter must be set to `true` to ensure response is wrapped in
+  pagination format, if not set the response is returned flat, fit only for
+  infinite loading
 </ParamField>
-
 
 <ResponseExample>
-```json Response
-Sample Response
+```json Sample Response
 [
     {
         "debit": false,
@@ -84,7 +89,6 @@ Sample Response
         "captureDate": null,
         "narration": null
     }
-{
+]
 ```
-
 </ResponseExample>
