@@ -1,0 +1,12 @@
+---
+title: "Resend OTP to activate Customers Wallet"
+description: "For any reason Customer did not recieve OTP through SMS to activate Wallet with five(5) minutes. This endpoint can be used trigger a new OTP SMS"
+api: "POST /api/provider/wallets/{accountNumber}/otp"
+---
+<Tip>Ensure Customers interactions with this endpoint is around 5 Minutes as users sometimes will get SMS on time due to several factors. Limit User</Tip>
+
+## Path Parameters
+
+<ParamField path="accountNumber" type="string" required>
+  Customer Wallet Account Number
+</ParamField> 

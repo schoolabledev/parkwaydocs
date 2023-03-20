@@ -64,6 +64,7 @@
 					"pages": [
 						"service-endpoints/create-customer-wallet",
 						"service-endpoints/activate-customer-wallet",
+						"service-endpoints/resend-otp-to-activate-account",
 						"service-endpoints/add-account-to-wallet",
 						"service-endpoints/update-owner-bvn",
 						"service-endpoints/get-wallet-balance",
@@ -74,10 +75,16 @@
 						"service-endpoints/transfer-between-wallets",
 						"service-endpoints/bank-account-name-enquiry",
 						"service-endpoints/wallet-transfer-to-bank-account",
-						"service-endpoints/link-card-to-wallet",
 						"service-endpoints/transaction-statement-list",
 						"service-endpoints/wallets-pool-balances",
 						"service-endpoints/integration-modalities-callback"
+					]
+				},
+				{
+					"group": "Card Services",
+					"pages": [
+						"service-endpoints/card-endpoints/link-card-to-wallet", 
+						"service-endpoints/card-endpoints/linked-cards" 
 					]
 				},
 				{
