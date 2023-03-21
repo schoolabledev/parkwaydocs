@@ -1,0 +1,41 @@
+---
+title: "Linking Customer Card to Customer Wallet"
+description: "This endpoint is to enable customer card to be linked to the customer Wallet account per partner institutions"
+api: "POST /api/provider/wallets/{walletAccountNumber}/linkcard"
+---
+
+## Path Parameters
+<ParamField path="walletAccountNumber" type="string" required>
+  Customer Wallet Account Number to link to Card
+</ParamField>
+
+## Request Parameters
+<ParamField body="lastFour" type="string" required>
+  Last Four Digits of Card
+</ParamField>
+
+<ParamField body="requestReference" type="string" required>
+  A unique reference 
+</ParamField>
+
+<ParamField body="expDate" type="string" required>
+  Date Formated YYYMMDD e.g "20231001"
+</ParamField>
+
+
+
+<ResponseExample>
+```json Response Sample
+{
+    "code": "0000",
+    "desc": "Card added successfully",
+    "retRef": "",
+    "stan": "",
+    "transdatetime": null,
+    "bvn": "",
+    "voucher": "", 
+    "extra": "",
+    "pin": ""
+}
+```
+</ResponseExample>
