@@ -1,0 +1,77 @@
+---
+title: "Deactivate Customer Wallet"
+description: "This endpoint is utilized immediately for deactivating customer wallet"
+api: "POST /api/provider/wallets/deactivate"
+contentType: "application/json"
+---
+
+<Tip>
+  For Test environment please use any random 6 digit Number. On Production,
+  Customer would recieve a 6 digit OTP
+</Tip>
+
+<RequestExample>
+
+```json Request
+{
+  "accountNumber": "8441033721",
+  
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  {
+  "alias": "Dami Oluwole",
+  "accountNumber": "8441033721",
+  "currency": "566",
+  "createdOn": 1683205590000,
+  "activatedOn": 1685095239000,
+  "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNi04NDQxMDMzNzIxIiwicm9sZXMiOltdLCJpc3MiOiJyZWFkeWNhc2giLCJTZXNzaW9uSUQiOiJXQVpJUkkgSUJSQUhJTSBWRU5UVVJFUyJ9.rPc_dvdhqradI1gRT8Lq8tJVJxPIRwX1SDm04wGTr6alIcETXfr0iYpjbxn4xmnvXIuHoNEOch54ArsfPdU0sw",
+  "active": false,
+  "firstName": "Dami",
+  "lastName": "Oluwole",
+  "otherName": null,
+  "phoneNumber": "+2347188912704",
+  "dateOfBirth": null,
+  "accountHolder": {
+    "realId": "90023471889127046",
+    "active": true,
+    "startDate": 1683154800000,
+    "endDate": 2524518000000,
+    "honorific": null,
+    "gender": null,
+    "firstName": "Dami",
+    "middleName": null,
+    "lastName": "Oluwole",
+    "email": "felipe.schmidt@gmail.com",
+    "address1": null,
+    "city": null,
+    "state": null,
+    "zip": null,
+    "country": null,
+    "birthDate": null,
+    "phone": "+2347188912704",
+    "verified": true,
+    "expiryDate": null,
+    "bvn": null,
+    "kycLevel": 1,
+    "name": "Oluwole Dami"
+  }
+}
+
+}
+```
+
+</ResponseExample>
+
+## Request parameters
+
+<ParamField body="accountNumber" type="number" required>
+  AccountNumber tied to Customer Wallet
+</ParamField>
+
