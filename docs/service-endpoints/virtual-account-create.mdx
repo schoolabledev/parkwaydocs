@@ -30,13 +30,16 @@ Operating in _**RAILs Maintained**_ as explained in the introduction requires a 
   External Ref
 </ParamField>
 
-
+<ParamField body="account_number" type="string" hidden required>
+  Account Number to receive the money 
+</ParamField>
 
 <RequestExample>
 
 ```json Request
 {
   "account_name": "JEAN PAUL GUATIER",
+  "account_number": "8441030191"
   "amount": "0.00",
   "ttl": 30000,
   "multi": true,

@@ -64,6 +64,7 @@
 					"pages": [
 						"service-endpoints/create-customer-wallet",
 						"service-endpoints/activate-customer-wallet",
+						"service-endpoints/deactivate-customer-wallet",
 						"service-endpoints/resend-otp-to-activate-account",
 						"service-endpoints/add-account-to-wallet",
 						"service-endpoints/update-owner-bvn",
@@ -73,6 +74,7 @@
 						"service-endpoints/charge-debit-customer-wallet",
 						"service-endpoints/debit-charge-status-check",
 						"service-endpoints/transfer-between-wallets",
+						"service-endpoints/statuscheck-for-wallet-to-wallet-transfers",
 						"service-endpoints/bank-account-name-enquiry",
 						"service-endpoints/wallet-transfer-to-bank-account",
 						"service-endpoints/transaction-statement-list",
