@@ -1,9 +1,9 @@
 ---
 title: "Resend OTP to activate Customers Wallet"
-description: "For any reason Customer did not recieve OTP through SMS to activate Wallet with five(5) minutes. This endpoint can be used trigger a new OTP SMS"
+description: "If for any reason Customer did not recieve OTP through SMS to activate Wallet within five(5) minutes. This endpoint can be used trigger a new OTP SMS"
 api: "POST /api/provider/wallets/{accountNumber}/otp"
 ---
-<Tip>Ensure Customers interactions within this endpoint is delayed at least for about 5 Minutes as users sometimes may not get the SMS on-time due to several factors. This will help to prevent customers from receiving too many tokens and could get confused about the right one.</Tip>
+<Tip>Ensure Customers interactions with this endpoint is delayed at least for about 5 Minutes as users sometimes may not get the SMS on-time due to several factors. This will help to prevent customers from receiving too many tokens and could get confused about the right one.</Tip>
 
 <Note>This endpoint can also be used to verify if a Wallet has been activated.</Note>
 
