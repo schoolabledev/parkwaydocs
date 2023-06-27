@@ -1,0 +1,92 @@
+---
+title: "Transfer To Bank Account"
+description: "Transfer money from Base Wallet to Bank Account"
+api: "POST /rc/rest/agent/transact/transfer/bank"
+contentType: "application/json"
+---
+
+## Request Parameters
+
+<ParamField body="amount" type="string" required placeholder="50000">
+  Decimal value of the cash out amount. Transaction amount in major denomination
+  example = "100.00"
+</ParamField>
+
+<ParamField body="bankCode" type="string" required placeholder="038">
+  CBN code of beneficiary's Bank/Mobile Money operator, for interbank or
+  interscheme transactions. please refer to [bank code
+  section](../financial-institutions/microfinance-others-banks)
+</ParamField>
+
+<ParamField body="accountName" type="string" placeholder="xxxx xxxxx" required>
+  Account name returned in a name inquiry transaction, required for interbank or
+  interscheme transactions or subscriber name if returned in bill or merchant
+  validation
+</ParamField>
+
+<ParamField
+  body="accountNumber"
+  type="string"
+  placeholder="1234567890"
+  required
+>
+  CBN code of beneficiary's Bank/Mobile Money operator, for interbank or
+  interscheme transactions
+</ParamField>
+
+<ParamField body="pin" type="string" required placeholder="1111">
+  Pin is encrypted using 3DES and the HEX of session ID returned at login and
+  retured in 16 byte hexadecimal
+
+#### Below is pseudocode on how to encrypt your clear pin
+```python 
+#clear_text_pin - Your clear text transaction PIN
+#sessionID - This is retrieved from body/header when you retrieve a token
+
+# Encrypts the clear_text_pin using 3DES encryption with the provided key(sessionID)
+function encrypt_3des(clear_text_pin, sessionID):
+
+  encrypt_text = openssl_encrypt(clear_text, "DES-EDE3", sessionID, OPENSSL_RAW_DATA, "") #returns binary
+  encrypted_hex = convert_to_hex(encrypt_text) #convert to hexadecimal
+
+  return encrypted_hex
+```
+
+
+</ParamField>
+
+<ParamField body="memo" type="string" optional placeholder="For launch">
+  Narration for the transaction
+</ParamField>
+
+<ResponseExample>
+```JSON
+{
+  "availableBalance": null
+  "bvn": null,
+  "code": "0000",
+  "desc": "Transaction completed successfully, please check your SMS inbox for a more detailed response 607497",
+  "extendedMsg": "Transaction completed successfully, please check your SMS inbox for a more detailed response 607497",
+  "extra": "{"bank":"GTBankPlc","account":"0109031751","name":"ILESANMI  JOSIAH AKINWALE","narration":"food stuff"}",
+  "ledgerBalance": null,
+  "narration": "food stuff",
+  "retref": "607497",
+  "stan": "000003258608",
+  "statement": null,
+  "status": "COMPLETED",
+  "transDatetime": "20200610132823",
+  "voucher": "311058200610132823000003258608"
+}
+```
+</ResponseExample>
+
+### Application Status Code 
+
+| Code            | Description                       |                                                                                    
+| ----------------|:---------------------------------:|
+| 0000            | Successful                        |
+| 0009            | Pending                           |
+| 9999            | Pending                           |
+
+Any other response code indicates a failed request. please refer to [Application Status code
+  section](../../response-codes/application-status-codes) 

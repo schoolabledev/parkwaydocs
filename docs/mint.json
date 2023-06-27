@@ -56,6 +56,7 @@
 					"pages": [
 						"service-endpoints/admin-login",
 						"service-endpoints/base-wallet-balance",
+						"service-endpoints/administrator-endpoints/admin-bank-transfer",
 						"service-endpoints/admin-statement"
 					]
 				},
@@ -85,16 +86,22 @@
 				{
 					"group": "Card Services",
 					"pages": [
-						"service-endpoints/card-endpoints/link-card-to-wallet", 
-						"service-endpoints/card-endpoints/linked-cards" 
+						"service-endpoints/card-endpoints/link-card-to-wallet",
+						"service-endpoints/card-endpoints/linked-cards"
 					]
 				},
 				{
-					"group": "CBN Approved Financial Institutions",
+					"group": "Utilities",
 					"pages": [
-						"service-endpoints/financial-institutions/microfinance-others-banks",
-						"service-endpoints/financial-institutions/mobile-money-operators",
-						"service-endpoints/financial-institutions/banks"
+						{
+							"group": "Financial Institutions",
+							"pages": [
+								"service-endpoints/financial-institutions/microfinance-others-banks",
+								"service-endpoints/financial-institutions/mobile-money-operators",
+								"service-endpoints/financial-institutions/banks"
+							]
+						},
+						"service-endpoints/bank-account-name-enquiry"
 					]
 				},
 				{
