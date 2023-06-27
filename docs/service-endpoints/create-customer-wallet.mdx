@@ -10,48 +10,48 @@ contentType: "application/json"
   Customer Phone Number
 </ParamField>
 
-<ParamField body="email" type="string" required>
+<ParamField body="email" type="string">
   Customer's Email Address
 </ParamField>
 
-<ParamField body="address" type="string" required>
+<ParamField body="address" type="string">
   Customers' Address
 </ParamField>
 
-<ParamField body="addressState" type="string" required>
+<ParamField body="addressState" type="string">
   Address State
 </ParamField>
 
-<ParamField body="addressCity" type="string" required>
+<ParamField body="addressCity" type="string">
   Address City
 </ParamField>
 
-<ParamField body="firstName" type="string" required>
+<ParamField body="firstName" type="string">
   Customer's First Name
 </ParamField>
 
-<ParamField body="lastName" type="string" required>
+<ParamField body="lastName" type="string">
   Customer's Last Name
 </ParamField>
 
-<ParamField body="gender" type="string" placeholder="M"  required>
+<ParamField body="gender" type="string" placeholder="M">
   Gender
 </ParamField>
 
-<ParamField body="dateOfBirth" type="number" required>
+<ParamField body="dateOfBirth" type="number">
   Customer's Date of Birth
 </ParamField>
 
-<ParamField body="bvn" type="number" required>
+<ParamField body="bvn" type="number">
   Customer's Bank Verification Number
 </ParamField>
 
-<ParamField body="account" type="object" required>
+<ParamField body="account" type="object">
   <Expandable type="properties">
-    <ParamField body="alias" type="string" required>
+    <ParamField body="alias" type="string">
       Account Alias
     </ParamField>
-    <ParamField body="currencyCode" type="string" required default="NGN">
+    <ParamField body="currencyCode" type="string"  default="NGN">
       Account Alias
     </ParamField>
   </Expandable>

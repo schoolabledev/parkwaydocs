@@ -1,0 +1,41 @@
+---
+title: "Status Check for Wallet to Wallet Transfers"
+description: "
+This endpoint allows the retrieval of the status of a wallet-to-wallet transfer transaction between two accounts associated with a provider. It enables the verification of the current status of a 
+specific transfer transaction using the transaction reference provided. 
+"
+api: "POST /wallets/transactions/wallet_transfer/{fromAccount}/{toAccount}/{transactionRef}/status"
+
+---
+
+## Request parameters
+
+<ParamField path="fromAccount" type="number" required>
+   Account or wallet from which the transfer is being initiated
+</ParamField>
+
+<ParamField path="toAccount" type="number" required>
+  Destination account or wallet where the transfer is being sent
+</ParamField>
+
+<ParamField path="transactionRef" type="number" required>
+  Identifier for the transaction being performed
+</ParamField>
+
+
+
+<ResponseExample>
+```json Response Sample
+{
+    "id": 463467,
+    "transmissionDate": 1685005000000,
+    "responseCode": "0000",
+    "responseDescription": "Approved or completed successfully",
+    "stan": "000000437136",
+    "yourRef": "4596858695uu",
+    "ourRef": "279717",
+    "narration": "transfer between wallets",
+    "amount": 301.00
+}
+```
+</ResponseExample>
