@@ -78,6 +78,7 @@
 						"service-endpoints/statuscheck-for-wallet-to-wallet-transfers",
 						"service-endpoints/bank-account-name-enquiry",
 						"service-endpoints/wallet-transfer-to-bank-account",
+						"service-endpoints/find-wallets",
 						"service-endpoints/transaction-statement-list",
 						"service-endpoints/wallets-pool-balances",
 						"service-endpoints/integration-modalities-callback"
@@ -88,6 +89,15 @@
 					"pages": [
 						"service-endpoints/card-endpoints/link-card-to-wallet",
 						"service-endpoints/card-endpoints/linked-cards"
+					]
+				},
+				{
+					"group": "Virtual Account Services",
+					"pages": [
+						"service-endpoints/virtual-account-introduction",
+						"service-endpoints/virtual-account-create",
+						"service-endpoints/virtual-account-query",
+						"service-endpoints/virtual-account-partner-maintained"
 					]
 				},
 				{
@@ -102,15 +112,6 @@
 							]
 						},
 						"service-endpoints/bank-account-name-enquiry"
-					]
-				},
-				{
-					"group": "Virtual Account Services",
-					"pages": [
-						"service-endpoints/virtual-account-introduction",
-						"service-endpoints/virtual-account-create",
-						"service-endpoints/virtual-account-query",
-						"service-endpoints/virtual-account-partner-maintained"
 					]
 				}
 			]
