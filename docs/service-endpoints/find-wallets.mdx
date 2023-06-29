@@ -1,0 +1,91 @@
+---
+title: "Search/Filter Created Wallet"
+description: "This endpoint is utilized to search wallets you have created (Include the owner information of the wallet). it comes with filters to streamline your search"
+api: "GET /api/provider/wallets/search"
+---
+
+## Query parameters
+
+<ParamField query="pageSize" type="number" default="20" optional>
+  it's Advisable to keep it at a max 20
+</ParamField>
+
+<ParamField query="page" type="number" placeholder="1" default="1" optional>
+  You can skip by page, Default page is 1 (first page)
+</ParamField>
+
+<ParamField
+  query="status"
+  type="string"
+  default="active"
+  placeholder="active"
+  optional
+>
+  This can either be active or inactive
+</ParamField>
+
+<ParamField
+  query="accountNumber"
+  type="string"
+  placeholder="8441037152"
+  optional
+>
+  Filter by specific Account Number or likeness e.g 8441037152 or 844103 (This will search for all wallet with this prefix)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": [
+    {
+      "alias": "Yurwallet",
+      "accountNumber": "8441037152",
+      "currency": "566",
+      "createdOn": 1687181645000,
+      "activatedOn": 1687181647000,
+      "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNi04NDQxMDM3MTUyIiwicm9sZXMiOltdLCJpc3MiOiJyZWFkeWNhc2giLCJTZXNzaW9uSUQiOiJXQVpJUkkgSUJSQUhJTSBWRU5UVVJFUyJ9.twEcrgyvKTwVdeW_QpjgeYY5CwquReUL7GDLm8cV5HNI9gmj0DCikJYBCB9R4_A1k80meZvsD-0DYBGSHqSOYA",
+      "active": true,
+      "firstName": "Chinaza",
+      "lastName": "Ogwu",
+      "otherName": null,
+      "phoneNumber": "+2348109652658",
+      "dateOfBirth": null,
+      "accountHolder": {
+        "realId": "90023481096526583",
+        "active": true,
+        "startDate": 1680735600000,
+        "endDate": 2524518000000,
+        "honorific": null,
+        "gender": null,
+        "firstName": "Dami",
+        "middleName": null,
+        "lastName": "Oluwole",
+        "email": "meabout9@gmail.com",
+        "address1": null,
+        "city": null,
+        "state": null,
+        "zip": null,
+        "country": null,
+        "birthDate": null,
+        "phone": "+2348109652658",
+        "verified": true,
+        "expiryDate": null,
+        "bvn": "12345789135",
+        "kycLevel": 2,
+        "name": "Oluwole Dami"
+      }
+    }
+  ],
+  "total": 1,
+  "success": true,
+  "page": 1
+}
+```
+
+</ResponseExample>
+
+<Info>
+  Please utilize the pagination and the pageSize parameter for Quality
+  Experience
+</Info>
