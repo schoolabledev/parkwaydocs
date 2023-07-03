@@ -97,7 +97,8 @@
 						"service-endpoints/virtual-account-introduction",
 						"service-endpoints/virtual-account-create",
 						"service-endpoints/virtual-account-query",
-						"service-endpoints/virtual-account-partner-maintained"
+						"service-endpoints/virtual-account-partner-maintained",
+						"service-endpoints/virtual-account-rails-maintained"
 					]
 				},
 				{

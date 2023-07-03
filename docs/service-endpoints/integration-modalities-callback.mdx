@@ -5,24 +5,37 @@ title: "Integration Modalities for Callback/Inbound Bank Transfer Transaction Ca
 This functionality is to be implemented by partner institutions to enable real
 time update of transaction on customer wallet via Web, ATM or POS terminal to
 enable concurrence before completing transaction or notification for inbound
-bank transfer. It should be a Restful HTTP service endpoint with **ContentType
--application/json**.
+bank transfer.
+
+<Tip>
+  It should be a Restful HTTP service endpoint that accepts **ContentType -
+  application/json**.
+</Tip>
 
 ### Sample Expected request body Payload
 
 ```json Request
 {
-  "accountNumber":"500000007",
+  "accountNumber": "500000007",
   "transactionType": "01",
-  "transactionTypeDescription": "CASH WITHDRAWAL", "terminalId": "10000057",
-  "terminalNameLocation": "GTB ATM GALLERY ALAGOMEJI", "channel": "1",
+  "transactionTypeDescription": "CASH WITHDRAWAL",
+  "terminalId": "10000057",
+  "merchantId": null,
+  "cardAcceptor": null,
+  "terminalNameLocation": "GTB ATM GALLERY ALAGOMEJI",
+  "channel": "1",
   "narration": "GTB ATM GALLERY LA NG",
   "maskedPan": "568012********1234",
   "amount": "2300.00",
-  "surcharge":"65.00",
+  "surcharge": "65.00",
   "transmissionDate": 1641416850000,
   "reference": "000014220105220758286449969201",
-  "transactionState": "FINAL"
+  "transactionState": "FINAL",
+  "senderAccount": "0007340005",
+  "senderAccountName": "MARA XYZ MAIN ACCOUNT",
+  "mac": "cad09c2f5f1ac2574d0f189bd66569281503901530129d8dc2326b028e80f2993deef76e71187542ae3106e2e4813ba3267286f5dc90f5c9564f92af59bfb257",
+  "localId": 94,
+  "senderBank": "Access Bank"
 }
 ```
 
