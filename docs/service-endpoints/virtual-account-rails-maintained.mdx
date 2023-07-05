@@ -10,26 +10,6 @@ The integrating partner is required to provide 2 endpoints, one to validate the 
 This integration mode gives merchants the flexibility of using their customer references/ids as virtual accounts as long as they follow the standard 10 digits length with the issued  
 2 - 4 digit prefix
 
-To validate accounts R-VAS sends a message to a callback URL provided by the partner, and its is expected to return the customers name if successful or an error code if not.
-
-A **Validation** request payload would look like this
-
-```json Request
-{
-  "custid": "0607340006",
-  "channel": "mobile",
-  "mac": "ab00ff430598409584758675930945823045830495849"
-}
-```
-
-An expected response would be
-
-```json Response
-{
-  "responseCode": "0000",
-  "responseDesc": "ISSEY MIYAKE"
-}
-```
 
 When payments are recieved through compatible channels, a notification is sent via `HTTP POST` to the partners system via the provided callback resource
 
@@ -69,7 +49,6 @@ The MAC computed is a keyed MAC, a shared key would be managed between R-VAS and
 
 | Property  | Data Format     | Description                                                                                                                                                                                              |
 | --------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-                                                                        |
 | `channel` | `string`        | The channel through which the validation call is being made. This will typically be one of these options - `web`, `pos`, `mobile`, `bank`                                                                |
 | `reference`     | `string`        | This is a payment reference number used to track a transaction. In cases where the merchant generates e-receipt, it is advised that the parameter be included in the e-receipt.                          |
 | `amount`     | `decimal(12,2)` | This specifies the amount paid by the customer/agent. It always carries a 2 decimal place digit indicating the minor denomination of the currency paid with                                              |
