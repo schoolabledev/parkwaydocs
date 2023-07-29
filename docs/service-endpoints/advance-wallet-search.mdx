@@ -1,0 +1,92 @@
+---
+title: "Find wallets"
+description: "This endpoint is utilized to find wallet using fields(mobile, email, firstName, lastName) or a combination of them"
+api: "GET /api/provider/wallets/find"
+---
+
+## Query parameters
+
+<ParamField body="email" type="number" placeholder="chucks@parkway.ng" optional>
+For this example, it is email but  the  body parameter can be one or more of this keynames below and their respective values
+
+  - email (valid email address),
+  - firstName,
+  - LastName,
+  - mobile (11 digtis)
+
+  Combine the restriction to get a proper filter for finding wallets
+  e.g
+  To find with email and phone constraint then body should be
+  ```json
+  {
+    "email": "chucks@parkway.ng",
+    "phone": "08017123843"
+  }
+  ```
+</ParamField>
+
+<Warning>Passing an empty json body will lead to spooling of all wallet, for optimal performance, please make use of the body parameters to find wallets</Warning>
+
+<ParamField query="pageSize" type="number" default="20" optional>
+  it's Advisable to keep it at a max 20
+</ParamField>
+
+<ParamField query="page" type="number" placeholder="1" default="1" optional>
+  You can skip by page, Default page is 1 (first page)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": [
+    {
+      "alias": "Yurwallet",
+      "accountNumber": "8441037152",
+      "currency": "566",
+      "createdOn": 1687181645000,
+      "activatedOn": 1687181647000,
+      "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNi04NDQxMDM3MTUyIiwicm9sZXMiOltdLCJpc3MiOiJyZWFkeWNhc2giLCJTZXNzaW9uSUQiOiJXQVpJUkkgSUJSQUhJTSBWRU5UVVJFUyJ9.twEcrgyvKTwVdeW_QpjgeYY5CwquReUL7GDLm8cV5HNI9gmj0DCikJYBCB9R4_A1k80meZvsD-0DYBGSHqSOYA",
+      "active": true,
+      "firstName": "Chinaza",
+      "lastName": "Ogwu",
+      "otherName": null,
+      "phoneNumber": "+2348109652658",
+      "dateOfBirth": null,
+      "accountHolder": {
+        "realId": "90023481096526583",
+        "active": true,
+        "startDate": 1680735600000,
+        "endDate": 2524518000000,
+        "honorific": null,
+        "gender": null,
+        "firstName": "Dami",
+        "middleName": null,
+        "lastName": "Oluwole",
+        "email": "meabout9@gmail.com",
+        "address1": null,
+        "city": null,
+        "state": null,
+        "zip": null,
+        "country": null,
+        "birthDate": null,
+        "phone": "+2348109652658",
+        "verified": true,
+        "expiryDate": null,
+        "bvn": "12345789135",
+        "kycLevel": 2,
+        "name": "Oluwole Dami"
+      }
+    }
+  ],
+  "total": 1,
+  "success": true,
+  "page": 1
+}
+```
+
+</ResponseExample>
+
+<Info>
+  Please utilize the page and the pageSize parameter for Optimal performance of this endpoint
+</Info>
