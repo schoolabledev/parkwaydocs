@@ -43,9 +43,12 @@
 		{
 			"group": "Parkway RAILs API",
 			"pages": [
+				"home",
 				"introduction",
 				"general-flow",
-				"api-service-url"
+				"api-service-url",
+				"benefit-of-parkwayrails"
+
 			]
 		},
 		{
