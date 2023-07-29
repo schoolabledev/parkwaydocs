@@ -1,18 +1,19 @@
 ---
 title: "Find wallets"
 description: "This endpoint is utilized to find wallet using fields(mobile, email, firstName, lastName) or a combination of them"
-api: "GET /api/provider/wallets/find"
+api: "POST /api/provider/wallets/find"
+contentType: "application/json"
 ---
 
 ## Query parameters
 
-<ParamField body="email" type="number" placeholder="chucks@parkway.ng" optional>
+<ParamField body="email" type="string" placeholder="chucks@parkway.ng" optional>
 For this example, it is email but  the  body parameter can be one or more of this keynames below and their respective values
 
   - email (valid email address),
   - firstName,
   - LastName,
-  - mobile (11 digtis)
+  - mobile (11 digits)
 
   Combine the restriction to get a proper filter for finding wallets
   e.g
