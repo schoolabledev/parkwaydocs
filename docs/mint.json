@@ -47,8 +47,8 @@
 				"introduction",
 				"general-flow",
 				"api-service-url",
-				"benefit-of-parkwayrails"
-
+				"benefit-of-parkwayrails",
+				"changeLogs"
 			]
 		},
 		{
@@ -81,8 +81,9 @@
 						"service-endpoints/statuscheck-for-wallet-to-wallet-transfers",
 						"service-endpoints/bank-account-name-enquiry",
 						"service-endpoints/wallet-transfer-to-bank-account",
-						"service-endpoints/find-wallets",
 						"service-endpoints/transaction-statement-list",
+						"service-endpoints/find-wallets",
+						"service-endpoints/advance-wallet-search",
 						"service-endpoints/wallets-pool-balances",
 						"service-endpoints/integration-modalities-callback"
 					]
@@ -111,8 +112,9 @@
 							"group": "Financial Institutions",
 							"pages": [
 								"service-endpoints/financial-institutions/microfinance-others-banks",
-								"service-endpoints/financial-institutions/mobile-money-operators",
-								"service-endpoints/financial-institutions/banks"
+								"service-endpoints/financial-institutions/banks",
+								"service-endpoints/financial-institutions/micro-finance-banks",
+								"service-endpoints/financial-institutions/mobile-money-operators"
 							]
 						},
 						"service-endpoints/bank-account-name-enquiry"

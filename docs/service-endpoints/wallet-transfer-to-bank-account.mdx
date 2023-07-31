@@ -18,10 +18,16 @@ api: "POST /api/provider/wallets/transactions/banktransfer"
   Bank Account Name
 </ParamField>
 
+<ParamField body="transactionRef" optional>
+  A unique identifier for the transaction
+</ParamField>
+
 <ParamField body="destinationBankCode" type="number" required>
   CBN Bank Account Code. please refer to [bank code
   section](financial-institutions/microfinance-others-banks)
 </ParamField>
+
+<Warning>This endpoint does not work on staging environment</Warning>
 
 <RequestExample>
 ```json Request Sample
@@ -31,6 +37,7 @@ api: "POST /api/provider/wallets/transactions/banktransfer"
   "toAccountName": "Parkway Account",
   "destinationBankCode": "058",
   "amount": "50.00",
+  "transactionRef": "abcdef2010"
   "memo": "Transfer to Parkway"
 }
 ```

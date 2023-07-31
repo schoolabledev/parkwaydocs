@@ -1,10 +1,32 @@
 ---
-title: "Search/Filter Created Wallet"
-description: "This endpoint is utilized to search wallets you have created (Including the owner information of the wallet). it comes with filters to streamline your search"
-api: "GET /api/provider/wallets/search"
+title: "Find wallets"
+description: "This endpoint is utilized to find wallet using fields(mobile, email, firstName, lastName) or a combination of them"
+api: "POST /api/provider/wallets/find"
+contentType: "application/json"
 ---
 
 ## Query parameters
+
+<ParamField body="email" type="string" placeholder="chucks@parkway.ng" optional>
+For this example, it is email but  the  body parameter can be one or more of this keynames below and their respective values
+
+  - email (valid email address),
+  - firstName,
+  - LastName,
+  - mobile (11 digits)
+
+  Combine the restriction to get a proper filter for finding wallets
+  e.g
+  To find with email and phone constraint then body should be
+  ```json
+  {
+    "email": "chucks@parkway.ng",
+    "phone": "08017123843"
+  }
+  ```
+</ParamField>
+
+<Warning>Passing an empty json body will lead to spooling of all wallet, for optimal performance, please make use of the body parameters to find wallets</Warning>
 
 <ParamField query="pageSize" type="number" default="20" optional>
   it's Advisable to keep it at a max 20
@@ -12,25 +34,6 @@ api: "GET /api/provider/wallets/search"
 
 <ParamField query="page" type="number" placeholder="1" default="1" optional>
   You can skip by page, Default page is 1 (first page)
-</ParamField>
-
-<ParamField
-  query="status"
-  type="string"
-  default="active"
-  placeholder="active"
-  optional
->
-  This can either be active or inactive
-</ParamField>
-
-<ParamField
-  query="accountNumber"
-  type="string"
-  placeholder="8441037152"
-  optional
->
-  Filter by specific Account Number or likeness e.g 8441037152 or 844103 (This will search for all wallet with this prefix)
 </ParamField>
 
 <ResponseExample>
@@ -86,6 +89,5 @@ api: "GET /api/provider/wallets/search"
 </ResponseExample>
 
 <Info>
-  Please utilize the pagination and the pageSize parameter for Quality
-  Experience
+  Please utilize the page and the pageSize parameter for Optimal performance of this endpoint
 </Info>
