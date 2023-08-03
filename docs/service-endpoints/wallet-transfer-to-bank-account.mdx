@@ -18,6 +18,10 @@ api: "POST /api/provider/wallets/transactions/banktransfer"
   Bank Account Name
 </ParamField>
 
+<ParamField body="amount" type="number" required>
+  Amount to transfer
+</ParamField>
+
 <ParamField body="transactionRef" optional>
   A unique identifier for the transaction
 </ParamField>

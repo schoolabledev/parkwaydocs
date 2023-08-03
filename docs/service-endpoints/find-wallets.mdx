@@ -4,12 +4,14 @@ description: "This endpoint is utilized to search wallets you have created (Incl
 api: "GET /api/provider/wallets/search"
 ---
 
-## Query parameters
+## Body parameters
 
 <ParamField query="pageSize" type="number" default="20" optional>
   it's Advisable to keep it at a max 20
 </ParamField>
 
+
+## Query Parameters
 <ParamField query="page" type="number" placeholder="1" default="1" optional>
   You can skip by page, Default page is 1 (first page)
 </ParamField>
