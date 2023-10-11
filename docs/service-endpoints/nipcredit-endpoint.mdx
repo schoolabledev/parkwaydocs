@@ -1,0 +1,63 @@
+---
+title: "Credit Endpoint"
+description: "This endpoint is used to initiate a credit transaction. This request transfers funds from one bank
+account to another"
+api: "POST /rc/rest/common/simulators/nip/credit"
+contentType: "application/json"
+---
+
+
+
+<RequestExample>
+
+```json Request
+{
+ "accountNumber": "8551000000"   
+}
+```
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+    "code": "91",
+    "desc": "",
+    "retRef": "",
+    "stan": "",
+    "transdatetime": null,
+    "bvn": "",
+    "voucher": "",
+    "extra": "",
+    "pin": "",
+    "balance": ""
+}
+
+```
+
+</ResponseExample>
+
+<Warning>This endpoint only works on staging environment and should not be used on production</Warning>
+
+## Request parameters
+
+<ParamField body="amount" type="number" required>
+The amount of money to be credited, formatted as a string 
+</ParamField>
+
+<ParamField body="memo" type="string" optional>
+A memo or description for the transaction
+</ParamField>
+
+<ParamField body="memo" type="string" optional>
+A memo or description for the transaction
+</ParamField>
+
+<ParamField body="accountName" type="string" required>
+The name associated with the receiving bank account. 
+</ParamField>
+
+<ParamField body="accountNumber" type="string" required>
+  The bank account number of the recipient. 
+</ParamField>
+

@@ -1,0 +1,48 @@
+---
+title: "Name Inquiry"
+description: "The Name Inquiry endpoint allows you to perform a name inquiry simulation on 
+the staging environment (that is to verify 
+the name associated with a bank account number)."
+api: "POST /rc/rest/common/simulators/nip/name_inquiry"
+contentType: "application/json"
+---
+
+
+
+<RequestExample>
+
+```json Request
+{
+ "accountNumber": "8551000000"   
+}
+```
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+    "code": "91",
+    "desc": "",
+    "retRef": "",
+    "stan": "",
+    "transdatetime": null,
+    "bvn": "",
+    "voucher": "",
+    "extra": "",
+    "pin": "",
+    "balance": ""
+}
+
+```
+
+</ResponseExample>
+
+<Warning>This endpoint only works on staging environment and should not be used on production</Warning>
+
+## Request parameters
+
+<ParamField body="accountNumber" type="number" required>
+The bank account number for which you want to perform a name inquiry.
+</ParamField>
+
