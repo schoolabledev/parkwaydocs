@@ -14,16 +14,16 @@ kindly reach out to us on [here](parkway.ng/get-demo) if you do not have this cr
 
 ## Request Parameters
 
-<ParamField query="userName" type="string" required placeholder="000001">
+<ParamField body="userName" type="string" required placeholder="000001">
   Agent ID/Wallet ID of the partner usually numeric 6 or 10 digits
 </ParamField>
 
-<ParamField query="password" type="string" placeholder="5e884898da28047151d0e56f8dc6292773603" required>
+<ParamField body="password" type="string" placeholder="5e884898da28047151d0e56f8dc6292773603" required>
   Agents Password, if you have received a clear password, this parameter would
   take the SHA256 hash of the password recieved.
 </ParamField>
 
-<ParamField query="sessionLength" type="number" optional placeholder="30">
+<ParamField body="sessionLength" type="number" optional placeholder="30">
   Token validity length in minutes, default is 30 minutes
 </ParamField>
 

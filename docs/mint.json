@@ -86,6 +86,7 @@
 						"service-endpoints/advance-wallet-search",
 						"service-endpoints/wallets-pool-balances",
 						"service-endpoints/integration-modalities-callback"
+						
 					]
 				},
 				{
@@ -96,13 +97,38 @@
 					]
 				},
 				{
-					"group": "Virtual Account Services",
+					"group": "Virtual Account Services", 		 
 					"pages": [
 						"service-endpoints/virtual-account-introduction",
-						"service-endpoints/virtual-account-create",
-						"service-endpoints/virtual-account-query",
-						"service-endpoints/virtual-account-partner-maintained",
-						"service-endpoints/virtual-account-rails-maintained"
+						
+						{ 
+						
+						"group": "Partner Maintained Virtual Account", 
+							"pages": [
+								"service-endpoints/virtual-account-partner-maintained",
+									{
+										"group": "simulation endpoints", 
+										"pages": [
+								"service-endpoints/simulating-nameinquiry",
+								"service-endpoints/nipcredit-endpoint"
+										]
+								}
+								
+							]
+							
+
+						}, {
+							"group": "Rails Maintained Virtual Account", 
+							"pages": [
+								
+								"service-endpoints/virtual-account-create",
+								"service-endpoints/virtual-account-query",
+								"service-endpoints/virtual-account-rails-maintained"
+
+							]
+
+						}
+						
 					]
 				},
 				{
