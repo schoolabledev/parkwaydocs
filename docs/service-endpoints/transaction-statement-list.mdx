@@ -1,8 +1,9 @@
 ---
-title: "Transaction Statement / Transaction List"
+title: "Transaction Statement / Transaction List (⚠ deprecated)"
 description: "This endpoint is utilized to get a transaction statement and retrieve a list of transaction on a wallet"
-api: "GET /api/provider/wallets/{accountNumber}/statement"
+api: "GET /api/provider/wallets/:accountNumber/statement"
 ---
+
 
 <Tip>
   To improve query efficiency please ensure you paginate queries and if possible
@@ -19,6 +20,13 @@ api: "GET /api/provider/wallets/{accountNumber}/statement"
 
 {" "}
 
+<ParamField query="start_date" type="number" placeholder="1110000000">
+  UTC date/time stamp in milliseconds for the start date of the query
+</ParamField>
+
+<ParamField query="end_date" type="number" placeholder="1111000000">
+  UTC date/time stamp in milliseconds for the end date of the query
+</ParamField>
 
 <ParamField query="pageSize" type="number" optional default="20">
   The page size of the records to return, default is 20, max is 100
