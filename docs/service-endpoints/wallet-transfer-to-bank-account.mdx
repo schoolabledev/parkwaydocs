@@ -18,6 +18,10 @@ api: "POST /api/provider/wallets/transactions/banktransfer"
   Bank Account Name
 </ParamField>
 
+<ParamField body="amount" type="number" required>
+  Amount to transfer
+</ParamField>
+
 <ParamField body="transactionRef" optional>
   A unique identifier for the transaction
 </ParamField>
@@ -25,6 +29,10 @@ api: "POST /api/provider/wallets/transactions/banktransfer"
 <ParamField body="destinationBankCode" type="number" required>
   CBN Bank Account Code. please refer to [bank code
   section](financial-institutions/microfinance-others-banks)
+</ParamField>
+
+<ParamField body="memo" type="number" placeholder="drinks" required>
+  Transaction Memo
 </ParamField>
 
 <Warning>This endpoint does not work on staging environment</Warning>
@@ -35,6 +43,7 @@ api: "POST /api/provider/wallets/transactions/banktransfer"
 | ---- | :---------: |
 | 0000 | Successful  |
 | 0009 |   Pending   |
+
 
 
 <RequestExample>
