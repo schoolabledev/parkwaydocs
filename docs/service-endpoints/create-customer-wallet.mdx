@@ -30,7 +30,7 @@ contentType: "application/json"
   Customer's First Name
 </ParamField>
 
-<ParamField body="lastName" type="string">
+<ParamField body="lastName" type="string" required>
   Customer's Last Name
 </ParamField>
 
@@ -38,12 +38,17 @@ contentType: "application/json"
   Gender
 </ParamField>
 
-<ParamField body="dateOfBirth" type="number">
-  Customer's Date of Birth
+<ParamField body="dateOfBirth" type="number" required>
+  Please enter the date of birth in the following format: `YYYY-MM-DD`. 
+  For example, July 2, 1995, should be written as 1995-07-02
 </ParamField>
 
 <ParamField body="bvn" type="number">
   Customer's Bank Verification Number
+</ParamField>
+
+<ParamField body="nin" type="number" required>
+  Customer's National Identity Number
 </ParamField>
 
 <ParamField body="account" type="object">
@@ -69,8 +74,9 @@ contentType: "application/json"
   "firstName": "Tola",
   "lastName": "Future",
   "gender": "M",
-  "dateOfBirth": "468793200000",
+  "dateOfBirth": "1995-07-02",
   "bvn": "2210808767677",
+  "nin": "22222222280",
   "account": {
     "alias": "Tola Main",
     "currencyCode": "NGN"
