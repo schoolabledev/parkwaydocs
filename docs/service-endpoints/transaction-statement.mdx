@@ -1,0 +1,94 @@
+---
+title: "Transaction Statement"
+description: "This endpoint is utilized to get a transaction statement and retrieve a list of transaction on a wallet"
+api: "GET /api/provider/wallets/statement/{accountNumber}"
+---
+
+<Tip>
+  To improve query efficiency please ensure you paginate queries and if possible
+  scope your queries by date using the query parameters
+</Tip>
+
+## Path parameters
+
+<ParamField path="accountNumber" type="number" required>
+  Wallet Account Number
+</ParamField>
+
+## Query Parameters
+
+{" "}
+
+<ParamField query="start_date" type="number" placeholder="1110000000">
+  UTC date/time stamp in milliseconds for the start date of the query
+</ParamField>
+
+<ParamField query="end_date" type="number" placeholder="1111000000">
+  UTC date/time stamp in milliseconds for the end date of the query
+</ParamField>
+
+<ParamField query="pageSize" type="number" optional default="20">
+  The page size of the records to return, default is 20, max is 100
+</ParamField>
+
+<ParamField query="page" type="number" optional default="1">
+  The current page of the records to return, default is 1, max is total
+  records/pageSize this is a '1' index parameter
+</ParamField>
+
+<ParamField query="wrap" type="boolean" placeholder="true" default="true">
+  This parameter must be set to `true` to ensure response is wrapped in
+  pagination format, if not set the response is returned flat, fit only for
+  infinite loading
+</ParamField>
+
+<ResponseExample>
+```json Sample Response
+[
+    {
+        "debit": false,
+        "sender": null,
+        "recipient": null,
+        "terminal": null,
+        "tranId": 93292,
+        "tranType": "200.22.0000",
+        "description": null,
+        "shortDescription": null,
+        "longDescription": null,
+        "date": 1640016577000,
+        "amount": 100.00,
+        "reciept": null,
+        "balance": 955397.00,
+        "balance2": null,
+        "logoId": null,
+        "externalRef": null,
+        "sessionId": null,
+        "timestamp": null,
+        "captureDate": null,
+        "narration": null
+},
+{
+        "debit": false,
+        "sender": null,
+        "recipient": null,
+        "terminal": null,
+        "tranId": 93291,
+        "tranType": "200.22.0000",
+        "description": null,
+        "shortDescription": null,
+        "longDescription": null,
+        "date": 1640016417000,
+        "amount": 5000.00,
+        "reciept": null,
+        "balance": 955497.00,
+        "balance2": null,
+        "logoId": null,
+        "externalRef": null,
+        "sessionId": null,
+        "timestamp": null,
+        "captureDate": null,
+        "narration": null
+    }
+]
+```
+</ResponseExample>
